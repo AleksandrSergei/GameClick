@@ -19,6 +19,7 @@ namespace Игра
             InitializeComponent();
             //Music.pl2.Play();
             this.Load += new EventHandler(Form1_Load);
+            
         }
         void Form1_Load(object sender, EventArgs e)
         {
@@ -47,14 +48,6 @@ namespace Игра
             pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox12.Region = rgn;
             pictureBox12.BackColor = System.Drawing.SystemColors.ActiveCaption;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Music.pl2.Stop();
-            Hide();
-            Menu f = new Menu();
-            f.ShowDialog();
         }
 
         private void Map_KeyDown(object sender, KeyEventArgs e)
@@ -88,10 +81,11 @@ namespace Игра
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-                Hide();
-                //Music.pl2.Stop();
-                ИМиКН иМиКН = new ИМиКН();
-                иМиКН.ShowDialog();
+            Hide();
+            //Music.pl2.Stop();
+            ИМиКН иМиКН = new ИМиКН();
+            иМиКН.ShowDialog();
+            Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -122,11 +116,62 @@ namespace Игра
         {
             Hide();
             //Music.pl2.Stop();
-            Menu menu = new Menu();
-            menu.ShowDialog();
+            Game game = new Game();
+            game.ShowDialog();
+            Close();
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
         {
 
         }

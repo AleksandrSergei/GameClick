@@ -25,7 +25,10 @@ namespace Игра
             pictureBox11.Visible = false;
             pictureBox12.Visible = false;
             pictureBox14.Visible = false;
+            panel2.Visible = false;
         }
+
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -59,10 +62,44 @@ namespace Игра
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-                
-            //}
+            if (e.KeyCode == Keys.Enter)
+            {
+                panel2.Visible = true;
+            }
+        }
+
+        private void Play_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Map map = new Map();
+            map.ShowDialog();
+            Close();
+        }
+
+        private void Map_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Map map = new Map();
+            map.ShowDialog();
+            Close();
+        }
+        public void global_FormClosed()
+        {
+            Application.Exit();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Вы действительно хотите выйти?",
+                                                  "Выход",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Information,
+                                                  MessageBoxDefaultButton.Button2);
+            if (dialog == DialogResult.Yes)
+            {
+                //Music.pl1.Stop();
+                global_FormClosed();
+            }
         }
     }
 }
