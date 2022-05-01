@@ -25,6 +25,7 @@ namespace Игра
             label3.Text = $"Кол-во распечатываний: 0";
             //Music.pl4.Play();
 
+
         }
 
         private void button1_Click(object sender, EventArgs e)

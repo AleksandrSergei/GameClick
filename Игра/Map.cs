@@ -18,6 +18,23 @@ namespace Игра
         {
             InitializeComponent();
             //Music.pl2.Play();
+            this.Load += new EventHandler(Form1_Load);
+        }
+        void Form1_Load(object sender, EventArgs e)
+        {
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            path.AddEllipse(0, 3, 88, 90);
+            Region rgn = new Region(path);
+            pictureBox2.Region = rgn;
+            pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox3.Region = rgn;
+            pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox4.Region = rgn;
+            pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox5.Region = rgn;
+            pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox6.Region = rgn;
+            pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,6 +112,16 @@ namespace Игра
             //Music.pl2.Stop();
             Menu menu = new Menu();
             menu.ShowDialog();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

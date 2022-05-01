@@ -43,6 +43,7 @@ namespace Игра
                 Hide();
                 Menu f1 = new Menu();
                 f1.ShowDialog();
+                Close();
             }
         }
 
