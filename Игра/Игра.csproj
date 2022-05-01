@@ -7,7 +7,7 @@
     <ProjectGuid>{C3703C67-5B94-4B5F-84AD-AB8D315B0B7B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Игра</RootNamespace>
-    <AssemblyName>Игр</AssemblyName>
+    <AssemblyName>Игра</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -133,6 +133,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Заставка.resx">
       <DependentUpon>Заставка.cs</DependentUpon>
@@ -164,6 +165,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\карта.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
