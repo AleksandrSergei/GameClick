@@ -17,7 +17,7 @@ namespace Игра
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Заставка());
+            Application.Run(new Game());
         }
     }
 }
