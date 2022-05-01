@@ -35,6 +35,18 @@ namespace Игра
             pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox6.Region = rgn;
             pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox7.Region = rgn;
+            pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox8.Region = rgn;
+            pictureBox8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox9.Region = rgn;
+            pictureBox9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox10.Region = rgn;
+            pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox11.Region = rgn;
+            pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox12.Region = rgn;
+            pictureBox12.BackColor = System.Drawing.SystemColors.ActiveCaption;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,11 +124,6 @@ namespace Игра
             //Music.pl2.Stop();
             Menu menu = new Menu();
             menu.ShowDialog();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
