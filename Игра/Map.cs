@@ -35,6 +35,8 @@ namespace Игра
             pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox6.Region = rgn;
             pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox7.Region = rgn;
+            pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,11 +114,6 @@ namespace Игра
             //Music.pl2.Stop();
             Menu menu = new Menu();
             menu.ShowDialog();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
