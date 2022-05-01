@@ -23,20 +23,14 @@ namespace Игра
             label1.Text = $"Кол-во книг: 0";
             label2.Text = $"Кол-во листочков: 0";
             label3.Text = $"Кол-во распечатываний: 0";
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            path.AddEllipse(0, 3, 88, 90);
+            Region rgn = new Region(path);
+            button2.Region = rgn;
+            button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            button1.Region = rgn;
+            button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             //Music.pl4.Play();
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (countBook < 10)
-            {
-                countBook++;
-                label1.Text = $"Кол-во книг: {countBook}";
-            }
-            if (countBook == 10)
-                MessageBox.Show("Вы набрали лимит");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,7 +49,11 @@ namespace Игра
             timer1.Start();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             //Music.pl4.Stop();
             DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите выйти?",
@@ -74,9 +72,16 @@ namespace Игра
                 //Music.pl4.Play();
             }
         }
-        private void ИМиКН_MouseMove()
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            //Music.pl3.Play();
+            if (countBook < 10)
+            {
+                countBook++;
+                label1.Text = $"Кол-во книг: {countBook}";
+            }
+            if (countBook == 10)
+                MessageBox.Show("Вы набрали лимит");
         }
 
         private void button3_Click(object sender, EventArgs e)
