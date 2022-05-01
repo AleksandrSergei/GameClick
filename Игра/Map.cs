@@ -37,6 +37,16 @@ namespace Игра
             pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox7.Region = rgn;
             pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox8.Region = rgn;
+            pictureBox8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox9.Region = rgn;
+            pictureBox9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox10.Region = rgn;
+            pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox11.Region = rgn;
+            pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            pictureBox12.Region = rgn;
+            pictureBox12.BackColor = System.Drawing.SystemColors.ActiveCaption;
         }
 
         private void button1_Click(object sender, EventArgs e)
