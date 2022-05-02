@@ -24,12 +24,10 @@ namespace Игра
             label2.Text = $"Кол-во листочков: 0";
             label3.Text = $"Кол-во распечатываний: 0";
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            path.AddEllipse(0, 3, 88, 90);
+            path.AddEllipse(0, 0, 88, 90);
             Region rgn = new Region(path);
             button2.Region = rgn;
             button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            button1.Region = rgn;
-            button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             //Music.pl4.Play();
         }
 
