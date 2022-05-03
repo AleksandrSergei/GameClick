@@ -138,6 +138,9 @@
     <EmbeddedResource Include="Заставка.resx">
       <DependentUpon>Заставка.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ИГиП.resx">
+      <DependentUpon>ИГиП.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ИМиКН.resx">
       <DependentUpon>ИМиКН.cs</DependentUpon>
     </EmbeddedResource>
