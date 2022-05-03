@@ -62,6 +62,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -74,6 +75,7 @@
             this.label1.Size = new System.Drawing.Size(113, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Кол-во книг:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -86,12 +88,13 @@
             this.label2.Size = new System.Drawing.Size(136, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Кол-во листов:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(172)))), ((int)(((byte)(184)))));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(200, 294);
+            this.button2.Location = new System.Drawing.Point(127, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 160);
             this.button2.TabIndex = 4;
@@ -121,15 +124,16 @@
             this.label3.Size = new System.Drawing.Size(166, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "Кол-во принтеров:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
             this.richTextBox1.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(321, 105);
+            this.richTextBox1.Location = new System.Drawing.Point(319, 104);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(565, 166);
+            this.richTextBox1.Size = new System.Drawing.Size(565, 214);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "Тебе нужно написать реферат по математике:\n5 книг\n10 листов\n1 принтер\nУ вас есть " +
     "10 секунд!";
@@ -151,6 +155,7 @@
             this.label4.Size = new System.Drawing.Size(28, 28);
             this.label4.TabIndex = 13;
             this.label4.Text = "0";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -163,6 +168,7 @@
             this.label5.Size = new System.Drawing.Size(28, 28);
             this.label5.TabIndex = 14;
             this.label5.Text = "0";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -175,6 +181,7 @@
             this.label6.Size = new System.Drawing.Size(28, 28);
             this.label6.TabIndex = 15;
             this.label6.Text = "0";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -187,6 +194,7 @@
             this.label7.Size = new System.Drawing.Size(120, 29);
             this.label7.TabIndex = 16;
             this.label7.Text = "ТАЙМЕР";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button4
             // 
@@ -211,6 +219,7 @@
             this.label8.Size = new System.Drawing.Size(516, 33);
             this.label8.TabIndex = 19;
             this.label8.Text = "Институт математики и компьютерных наук";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox2
             // 
@@ -262,6 +271,7 @@
             this.label9.Size = new System.Drawing.Size(130, 26);
             this.label9.TabIndex = 24;
             this.label9.Text = "Кол-во мозгов:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // ИМиКН
             // 
