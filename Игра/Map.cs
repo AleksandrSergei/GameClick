@@ -86,14 +86,6 @@ namespace Игра
             Close();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Hide();
-            //Music.pl2.Stop();
-            ИИиПН иИиПН = new ИИиПН();
-            иИиПН.ShowDialog();
-        }
-
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             Hide();

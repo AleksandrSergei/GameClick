@@ -271,6 +271,7 @@
             this.label9.Size = new System.Drawing.Size(130, 26);
             this.label9.TabIndex = 24;
             this.label9.Text = "Кол-во мозгов:";
+            this.label9.Visible = false;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // ИМиКН
