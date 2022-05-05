@@ -46,8 +46,6 @@ namespace Игра
             pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox11.Region = rgn;
             pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            pictureBox12.Region = rgn;
-            pictureBox12.BackColor = System.Drawing.SystemColors.ActiveCaption;
         }
 
         private void Map_KeyDown(object sender, KeyEventArgs e)
@@ -86,22 +84,6 @@ namespace Игра
             ИМиКН иМиКН = new ИМиКН();
             иМиКН.ShowDialog();
             Close();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Hide();
-            //Music.pl2.Stop();
-            ИГиП иГиП = new ИГиП();
-            иГиП.ShowDialog();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Hide();
-            //Music.pl2.Stop();
-            ИИиПН иИиПН = new ИИиПН();
-            иИиПН.ShowDialog();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -168,7 +150,11 @@ namespace Игра
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ИГиП иГиП = new ИГиП();
+            иГиП.ShowDialog();
+            Close();
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)

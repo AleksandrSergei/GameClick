@@ -98,12 +98,6 @@
     <Compile Include="ИГиП.Designer.cs">
       <DependentUpon>ИГиП.cs</DependentUpon>
     </Compile>
-    <Compile Include="ИИиПН.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ИИиПН.Designer.cs">
-      <DependentUpon>ИИиПН.cs</DependentUpon>
-    </Compile>
     <Compile Include="ИМиКН.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="Заставка.resx">
       <DependentUpon>Заставка.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИГиП.resx">
+      <DependentUpon>ИГиП.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ИМиКН.resx">
       <DependentUpon>ИМиКН.cs</DependentUpon>

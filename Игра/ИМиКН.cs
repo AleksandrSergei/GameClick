@@ -33,10 +33,6 @@ namespace Игра
         public ИМиКН()
         {
             InitializeComponent();
-            label1.Text = $"Кол-во книг: 0";
-            label2.Text = $"Кол-во листов: 0";
-            label3.Text = $"Кол-во принтеров: 0";
-            label9.Text = $"";
 
             button1.Visible = true;
             button2.Visible = true;
@@ -468,6 +464,56 @@ namespace Игра
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
