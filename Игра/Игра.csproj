@@ -104,6 +104,12 @@
     <Compile Include="ИМиКН.Designer.cs">
       <DependentUpon>ИМиКН.cs</DependentUpon>
     </Compile>
+    <Compile Include="ФизТех.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ФизТех.Designer.cs">
+      <DependentUpon>ФизТех.cs</DependentUpon>
+    </Compile>
     <Compile Include="ФЭИ.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ИМиКН.resx">
       <DependentUpon>ИМиКН.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ФизТех.resx">
+      <DependentUpon>ФизТех.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ФЭИ.resx">
+      <DependentUpon>ФЭИ.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
