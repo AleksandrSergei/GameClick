@@ -86,14 +86,6 @@ namespace Игра
             Close();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Hide();
-            //Music.pl2.Stop();
-            ФЭИ фэи = new ФЭИ();
-            фэи.ShowDialog();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
@@ -115,7 +107,11 @@ namespace Игра
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ФЭИ фэи = new ФЭИ();
+            фэи.ShowDialog();
+            Close();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)

@@ -245,6 +245,7 @@ namespace Игра
 
             timer1.Start();
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             s -= 1;
