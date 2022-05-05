@@ -50,7 +50,7 @@ namespace Игра
                     book++;
                     label1.Text = $"Кол-во книг: {book}";
                 }
-                else if (book == 5) MessageBox.Show("Вы набрали нужное количесвто книг!");
+                else if (book == 5) MessageBox.Show("Вы набрали нужное количество книг!");
             }
 
             else if (level == 2)
