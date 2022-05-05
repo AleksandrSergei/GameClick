@@ -116,7 +116,11 @@ namespace Игра
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ФизТех физТех = new ФизТех();
+            физТех.ShowDialog();
+            Close();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
