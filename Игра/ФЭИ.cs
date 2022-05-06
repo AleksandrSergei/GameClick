@@ -359,7 +359,7 @@ namespace Игра
                         richTextBox1.Text = "Контрольная по маркетингу:\n500 статистик\n350 книг\n400 калькуляторов\nУ вас есть 4 минуты 10 секунд!";
                         button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка статистика.png");
                         button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка калькулятор.png");
+                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка калькулятор.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)

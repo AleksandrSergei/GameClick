@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace Игра
 {
-    public partial class ФизТех : Form
+    public partial class ИнБио : Form
     {
         private int book = 0;
         private int sheet = 0;
         private int pencil = 0;
         private int brain = 0;
-        private int rover = 0;
-        private int apple = 0;
-        private int laptop = 0;
-        private int atom = 0;
+        private int plant = 0;
+        private int microscope = 0;
+        private int dnk = 0;
+        private int flack = 0;
         private int breakfast = 0;
         private int fruits = 0;
         private int soda = 0;
-        private int bulb = 0;
         private int h = 0, m = 0, s = 0;
 
         private int level = 1;
 
-        public ФизТех()
+        public ИнБио()
         {
             InitializeComponent();
 
@@ -41,52 +40,52 @@ namespace Игра
         {
             if (level == 1)
             {
-                if (rover < 300)
+                if (book < 20)
                 {
-                    rover++;
-                    label1.Text = $"Кол-во марсоходов: {rover}";
+                    book++;
+                    label1.Text = $"Кол-во книг: {book}";
                 }
-                else if (rover == 300) MessageBox.Show("Вы набрали нужное количесвто марсоходов!");
+                else if (book == 20) MessageBox.Show("Вы набрали нужное количесвто книг!");
             }
 
             else if (level == 2)
             {
-                if (laptop < 700)
+                if (microscope < 60)
                 {
-                    laptop++;
-                    label1.Text = $"Кол-во ноутбуков: {laptop}";
+                    microscope++;
+                    label1.Text = $"Кол-во микроскопов: {microscope}";
                 }
-                else if (laptop == 700) MessageBox.Show("Вы набрали нужное количество ноутбуков!");
+                else if (microscope == 60) MessageBox.Show("Вы набрали нужное количество микроскопов!");
             }
 
             else if (level == 3)
             {
-                if (breakfast < 800)
+                if (breakfast < 90)
                 {
                     breakfast++;
                     label1.Text = $"Кол-во завтраков: {breakfast}";
                 }
-                else if (breakfast == 800) MessageBox.Show("Вы набрали нужное количество завтраков!");
+                else if (breakfast == 90) MessageBox.Show("Вы набрали нужное количество завтраков!");
             }
 
             else if (level == 4)
             {
-                if (bulb < 1000)
+                if (dnk < 150)
                 {
-                    bulb++;
-                    label1.Text = $"Кол-во лампочек: {bulb}";
+                    dnk++;
+                    label1.Text = $"Кол-во днк: {dnk}";
                 }
-                else if (bulb == 1000) MessageBox.Show("Вы набрали нужное количество лампочек!");
+                else if (dnk == 150) MessageBox.Show("Вы набрали нужное количество днк!");
             }
 
             else if (level == 5)
             {
-                if (rover < 1000)
+                if (microscope < 120)
                 {
-                    rover++;
-                    label1.Text = $"Кол-во марсоходов: {rover}";
+                    microscope++;
+                    label1.Text = $"Кол-во микроскопов: {microscope}";
                 }
-                else if (rover == 1000) MessageBox.Show("Вы набрали нужное количество марсоходов!");
+                else if (microscope == 120) MessageBox.Show("Вы набрали нужное количество микроскопов!");
             }
         }
 
@@ -94,52 +93,52 @@ namespace Игра
         {
             if (level == 1)
             {
-                if (sheet < 200)
+                if (plant < 20)
                 {
-                    sheet++;
-                    label2.Text = $"Кол-во листов: {sheet}";
+                    plant++;
+                    label2.Text = $"Кол-во растений: {plant}";
                 }
-                else if (sheet == 200) MessageBox.Show("Вы набрали нужное количесвто листов!");
+                else if (plant == 20) MessageBox.Show("Вы набрали нужное количесвто растений!");
             }
 
             else if (level == 2)
             {
-                if (brain < 300)
+                if (plant < 50)
                 {
-                    brain++;
-                    label2.Text = $"Кол-во мозгов: {brain}";
+                    plant++;
+                    label2.Text = $"Кол-во растений: {plant}";
                 }
-                else if (brain == 300) MessageBox.Show("Вы набрали нужное количество мозгов!");
+                else if (plant == 50) MessageBox.Show("Вы набрали нужное количество растений!");
             }
 
             else if (level == 3)
             {
-                if (fruits < 800)
+                if (fruits < 60)
                 {
                     fruits++;
                     label2.Text = $"Кол-во фруктов: {fruits}";
                 }
-                else if (fruits == 800) MessageBox.Show("Вы набрали нужное количество фруктов!");
+                else if (fruits == 60) MessageBox.Show("Вы набрали нужное количество фруктов!");
             }
 
             else if (level == 4)
             {
-                if (book < 700)
+                if (flack < 100)
                 {
-                    book++;
-                    label2.Text = $"Кол-во книг: {book}";
+                    flack++;
+                    label2.Text = $"Кол-во колб: {flack}";
                 }
-                else if (book == 700) MessageBox.Show("Вы набрали нужное количество книг!");
+                else if (flack == 100) MessageBox.Show("Вы набрали нужное количество колб!");
             }
 
             else if (level == 5)
             {
-                if (brain < 1500)
+                if (plant < 175)
                 {
-                    brain++;
-                    label2.Text = $"Кол-во мозгов: {brain}";
+                    plant++;
+                    label2.Text = $"Кол-во растений: {plant}";
                 }
-                else if (brain == 1500) MessageBox.Show("Вы набрали нужное количество мозгов!");
+                else if (plant == 175) MessageBox.Show("Вы набрали нужное количество растений!");
             }
         }
 
@@ -147,52 +146,52 @@ namespace Игра
         {
             if (level == 1)
             {
-                if (apple < 100)
-                {
-                    apple++;
-                    label3.Text = $"Кол-во яблок: {apple}";
-                }
-                else if (apple == 100) MessageBox.Show("Вы набрали нужное количесвто яблок!");
-            }
-
-            else if (level == 2)
-            {
-                if (pencil < 200)
+                if (pencil < 40)
                 {
                     pencil++;
                     label3.Text = $"Кол-во карандашей: {pencil}";
                 }
-                else if (pencil == 200) MessageBox.Show("Вы набрали нужное количество карандашей!");
+                else if (pencil == 40) MessageBox.Show("Вы набрали нужное количесвто карандашей!");
+            }
+
+            else if (level == 2)
+            {
+                if (brain < 40)
+                {
+                    brain++;
+                    label3.Text = $"Кол-во мозгов: {brain}";
+                }
+                else if (brain == 40) MessageBox.Show("Вы набрали нужное количество мозгов!");
             }
 
             else if (level == 3)
             {
-                if (soda < 300)
+                if (soda < 30)
                 {
                     soda++;
                     label3.Text = $"Кол-во газировок: {soda}";
                 }
-                else if (soda == 300) MessageBox.Show("Вы набрали нужное количество газировок!");
+                else if (soda == 30) MessageBox.Show("Вы набрали нужное количество газировок!");
             }
 
             else if (level == 4)
             {
-                if (atom < 700)
+                if (sheet < 50)
                 {
-                    atom++;
-                    label3.Text = $"Кол-во атомов: {atom}";
+                    sheet++;
+                    label3.Text = $"Кол-во листов: {sheet}";
                 }
-                else if (atom == 700) MessageBox.Show("Вы набрали нужное количество атомов!");
+                else if (sheet == 50) MessageBox.Show("Вы набрали нужное количество листов!");
             }
 
             else if (level == 5)
             {
-                if (atom < 500)
+                if (sheet < 80)
                 {
-                    atom++;
-                    label3.Text = $"Кол-во атомов: {atom}";
+                    sheet++;
+                    label3.Text = $"Кол-во листов: {sheet}";
                 }
-                else if (atom == 500) MessageBox.Show("Вы набрали нужное количество атом!");
+                else if (sheet == 80) MessageBox.Show("Вы набрали нужное количество листов!");
             }
         }
 
@@ -200,25 +199,25 @@ namespace Игра
         {
             if (level == 1)
             {
-                h = 0; m = 1; s = 40;
-                rover = 0; sheet = 0; apple = 0;
-                label1.Text = $"Кол-во марсоходов: {rover}";
-                label2.Text = $"Кол-во листов: {sheet}";
-                label3.Text = $"Кол-во яблок: {apple}";
+                h = 0; m = 0; s = 20;
+                book = 0; plant = 0; pencil = 0;
+                label1.Text = $"Кол-во книг: {book}";
+                label2.Text = $"Кол-во растений: {plant}";
+                label3.Text = $"Кол-во карандашей: {pencil}";
             }
 
             else if (level == 2)
             {
-                h = 0; m = 3; s = 20;
-                laptop = 0; brain = 0; pencil = 0;
-                label1.Text = $"Кол-во ноутбуков: {laptop}";
-                label2.Text = $"Кол-во мозгов: {brain}";
-                label3.Text = $"Кол-во карандашей: {pencil}";
+                h = 0; m = 0; s = 40;
+                microscope = 0; plant = 0; brain = 0;
+                label1.Text = $"Кол-во микроскопов: {microscope}";
+                label2.Text = $"Кол-во растений: {plant}";
+                label3.Text = $"Кол-во мозгов: {brain}";
             }
 
             else if (level == 3)
             {
-                h = 0; m = 5; s = 0;
+                h = 0; m = 1; s = 0;
                 breakfast = 0; fruits = 0; soda = 0;
                 label1.Text = $"Кол-во завтраков: {breakfast}";
                 label2.Text = $"Кол-во фруктов: {fruits}";
@@ -227,20 +226,20 @@ namespace Игра
 
             else if (level == 4)
             {
-                h = 0; m = 6; s = 40;
-                bulb = 0; book = 0; atom = 0;
-                label1.Text = $"Кол-во лампочек: {bulb}";
-                label2.Text = $"Кол-во книг: {book}";
-                label3.Text = $"Кол-во атомов: {atom}";
+                h = 0; m = 1; s = 20;
+                dnk = 0; flack = 0; sheet = 0;
+                label1.Text = $"Кол-во днк: {dnk}";
+                label2.Text = $"Кол-во колб: {flack}";
+                label3.Text = $"Кол-во листов: {sheet}";
             }
 
             else if (level == 5)
             {
-                h = 0; m = 8; s = 20;
-                rover = 0; brain = 0; atom = 0;
-                label1.Text = $"Кол-во марсоходов: {rover}";
-                label2.Text = $"Кол-во мозгов: {brain}";
-                label3.Text = $"Кол-во атомов: {atom}";
+                h = 0; m = 1; s = 40;
+                microscope = 0; plant = 0; sheet = 0;
+                label1.Text = $"Кол-во микроскопов: {microscope}";
+                label2.Text = $"Кол-во растенйи: {plant}";
+                label3.Text = $"Кол-во листов: {sheet}";
             }
 
             timer1.Start();
@@ -262,7 +261,7 @@ namespace Игра
 
             if (level == 1)
             {
-                if ((rover == 300 && sheet == 200 && apple == 100) && (s > 0 || h > 0 || m > 0))
+                if ((book == 20 && plant == 20 && pencil == 40) && (s > 0 || h > 0 || m > 0))
                 {
                     timer1.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
@@ -272,40 +271,40 @@ namespace Игра
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        rover = 0; sheet = 0; apple = 0;
+                        book = 0; plant = 0; pencil = 0;
                         h = 0; m = 0; s = 0;
                         level = 2;
-                        label1.Text = $"Кол-во ноутбуков: {laptop}";
-                        label2.Text = $"Кол-во мозгов: {brain}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        richTextBox1.Text = "Сдать лабораторную работу по информатике:\n700 ноутбуков\n300 мозгов\n200 карандашей\nУ вас есть 3 минута 20 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка ноутбук.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка карандаш.png");
+                        label1.Text = $"Кол-во микроскопов: {microscope}";
+                        label2.Text = $"Кол-во растений: {plant}";
+                        label3.Text = $"Кол-во мозгов: {brain}";
+                        richTextBox1.Text = "Сдать лабораторную работу по биоинженерии:\n60 микроскопов\n50 растений\n40 мозгов\nУ вас есть 40 секунд!";
+                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка микроскоп.png");
+                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка растение.png");
+                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
                     timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: марсоходов {rover}, листов {sheet}, яблок {apple}.",
+                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, растений {plant}, карандашей {pencil}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
                                                       MessageBoxIcon.Information,
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        rover = 0; sheet = 0; apple = 0;
+                        book = 0; plant = 0; pencil = 0;
                         h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во марсоходов: {rover}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во яблок: {apple}";
+                        label1.Text = $"Кол-во книг: {book}";
+                        label2.Text = $"Кол-во растений: {plant}";
+                        label3.Text = $"Кол-во карандашей: {pencil}";
                     }
                 }
             }
 
             else if (level == 2)
             {
-                if ((laptop == 700 && brain == 300 && pencil == 200) && (s > 0 || h > 0 || m > 0))
+                if ((microscope == 60 && plant == 50 && brain == 40) && (s > 0 || h > 0 || m > 0))
                 {
                     timer1.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
@@ -315,13 +314,13 @@ namespace Игра
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        laptop = 0; brain = 0; pencil = 0;
+                        microscope = 0; plant = 0; brain = 0;
                         h = 0; m = 0; s = 0;
                         level = 3;
                         label1.Text = $"Кол-во завтраков: {breakfast}";
                         label2.Text = $"Кол-во фруктов: {fruits}";
                         label3.Text = $"Кол-во газировок: {soda}";
-                        richTextBox1.Text = "Время покушать, столовая:\n800 завтраков\n700 фруктов\n300 газировок\nУ вас есть 5 минут!";
+                        richTextBox1.Text = "Время покушать, столовая:\n90 завтраков\n60 фруктов\n30 газировок\nУ вас есть 1 минута!";
                         button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка завтрак.png");
                         button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка фрукты.png");
                         button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка газировка.png");
@@ -330,25 +329,25 @@ namespace Игра
                 else if (h == 0 && m == 0 && s == 0)
                 {
                     timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: ноутбуков {laptop}, мозгов {brain}, карандашей {pencil}.",
+                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: микроскопов {microscope}, растений {plant}, мозгов {brain}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
                                                       MessageBoxIcon.Information,
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        laptop = 0; brain = 0; pencil = 0;
+                        microscope = 0; plant = 0; brain = 0;
                         h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во ноутбуков: {laptop}";
-                        label2.Text = $"Кол-во мозгов: {brain}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
+                        label1.Text = $"Кол-во микроскопов: {microscope}";
+                        label2.Text = $"Кол-во растений: {plant}";
+                        label3.Text = $"Кол-во мозгов: {brain}";
                     }
                 }
             }
 
             else if (level == 3)
             {
-                if ((breakfast == 800 && fruits == 700 && soda == 300) && (s > 0 || h > 0 || m > 0))
+                if ((breakfast == 90 && fruits == 60 && soda == 30) && (s > 0 || h > 0 || m > 0))
                 {
                     timer1.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
@@ -361,13 +360,13 @@ namespace Игра
                         breakfast = 0; fruits = 0; soda = 0;
                         h = 0; m = 0; s = 0;
                         level = 4;
-                        label1.Text = $"Кол-во лампочек: {bulb}";
-                        label2.Text = $"Кол-во книг: {book}";
-                        label3.Text = $"Кол-во атомов: {atom}";
-                        richTextBox1.Text = "Лекция по технической физике:\n100 лампочек\n700 книг\n700 атомов\nУ вас есть 6 минут 40 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лампочка.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка атом.png");
+                        label1.Text = $"Кол-во днк: {dnk}";
+                        label2.Text = $"Кол-во колб: {flack}";
+                        label3.Text = $"Кол-во листов: {sheet}";
+                        richTextBox1.Text = "Решить задачи по биотехнологиям:\n150 днк\n100 колб\n50 листов\nУ вас есть 1 минут 20 секунд!";
+                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка днк.png");
+                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка колбы.png");
+                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
@@ -391,7 +390,7 @@ namespace Игра
 
             else if (level == 4)
             {
-                if ((bulb == 1000 && book == 700 && atom == 700) && (s > 0 || h > 0 || m > 0))
+                if ((dnk == 150 && flack == 100 && sheet == 50) && (s > 0 || h > 0 || m > 0))
                 {
                     timer1.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
@@ -401,40 +400,40 @@ namespace Игра
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        bulb = 0; book = 0; atom = 0;
+                        dnk = 0; flack = 0; sheet = 0;
                         h = 0; m = 0; s = 0;
                         level = 5;
-                        label1.Text = $"Кол-во марсоходов: {rover}";
-                        label2.Text = $"Кол-во мозгов: {brain}";
-                        label3.Text = $"Кол-во атомов: {atom}";
-                        richTextBox1.Text = "Экзамен по физике:\n1000 марсоходов\n1500 мозгов\n500 атомов\nУ вас есть 8 минут 20 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка марсоход.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка атом.png");
+                        label1.Text = $"Кол-во микроскопов: {microscope}";
+                        label2.Text = $"Кол-во растенйи: {plant}";
+                        label3.Text = $"Кол-во листов: {sheet}";
+                        richTextBox1.Text = "Сдать реферат на тему 'Анатомия растений':\n120 микроскопов\n175 растений\n80 листов\nУ вас есть 1 минут 40 секунд!";
+                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка микроскоп.png");
+                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка растение.png");
+                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
                     timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: лампочек {rover}, книг {brain}, атом {atom}.",
+                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: днк {dnk}, колб {flack}, листов {sheet}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
                                                       MessageBoxIcon.Information,
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        bulb = 0; book = 0; atom = 0;
+                        dnk = 0; flack = 0; sheet = 0;
                         h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во лампочек: {bulb}";
-                        label2.Text = $"Кол-во книг: {book}";
-                        label3.Text = $"Кол-во атомов: {atom}";
+                        label1.Text = $"Кол-во днк: {dnk}";
+                        label2.Text = $"Кол-во колб: {flack}";
+                        label3.Text = $"Кол-во листов: {sheet}";
                     }
                 }
             }
 
             else if (level == 5)
             {
-                if ((rover == 1000 && brain == 1500 && atom == 500) && (s > 0 || h > 0 || m > 0))
+                if ((microscope == 120 && plant == 175 && sheet == 80) && (s > 0 || h > 0 || m > 0))
                 {
                     timer1.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
@@ -444,7 +443,7 @@ namespace Игра
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        rover = 0; brain = 0; atom = 0;
+                        microscope = 0; plant = 0; sheet = 0;
                         h = 0; m = 0; s = 0;
                         level = 1;
                         label1.Text = $"";
@@ -459,18 +458,18 @@ namespace Игра
                 else if (h == 0 && m == 0 && s == 0)
                 {
                     timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: марсоходов {rover}, мозгов {brain}, атомов {atom}",
+                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: микроскопов {microscope}, растений {plant}, листов {sheet}",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
                                                       MessageBoxIcon.Information,
                                                       MessageBoxDefaultButton.Button1);
                     if (dialog == DialogResult.OK)
                     {
-                        rover = 0; brain = 0; atom = 0;
+                        microscope = 0; plant = 0; sheet = 0;
                         h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во марсоходов: {rover}";
-                        label2.Text = $"Кол-во мозгов: {brain}";
-                        label3.Text = $"Кол-во атомов: {atom}";
+                        label1.Text = $"Кол-во микроскопов: {microscope}";
+                        label2.Text = $"Кол-во растенйи: {plant}";
+                        label3.Text = $"Кол-во листов: {sheet}";
                     }
                 }
             }
@@ -499,6 +498,5 @@ namespace Игра
                 //Music.pl4.Play();
             }
         }
-
     }
 }
