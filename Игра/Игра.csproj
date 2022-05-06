@@ -110,6 +110,12 @@
     <Compile Include="ИнБио.Designer.cs">
       <DependentUpon>ИнБио.cs</DependentUpon>
     </Compile>
+    <Compile Include="ИнЗем.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ИнЗем.Designer.cs">
+      <DependentUpon>ИнЗем.cs</DependentUpon>
+    </Compile>
     <Compile Include="ФизТех.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ИнБио.resx">
       <DependentUpon>ИнБио.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИнЗем.resx">
+      <DependentUpon>ИнЗем.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ФизТех.resx">
       <DependentUpon>ФизТех.cs</DependentUpon>
