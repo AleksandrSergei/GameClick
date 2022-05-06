@@ -116,6 +116,12 @@
     <Compile Include="ИнЗем.Designer.cs">
       <DependentUpon>ИнЗем.cs</DependentUpon>
     </Compile>
+    <Compile Include="ИПиП.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ИПиП.Designer.cs">
+      <DependentUpon>ИПиП.cs</DependentUpon>
+    </Compile>
     <Compile Include="ФизТех.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ИнЗем.resx">
       <DependentUpon>ИнЗем.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИПиП.resx">
+      <DependentUpon>ИПиП.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ФизТех.resx">
       <DependentUpon>ФизТех.cs</DependentUpon>
