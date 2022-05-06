@@ -138,7 +138,11 @@ namespace Игра
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ИПиП иПиП = new ИПиП();
+            иПиП.ShowDialog();
+            Close();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
