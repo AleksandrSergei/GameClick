@@ -122,6 +122,12 @@
     <Compile Include="ИПиП.Designer.cs">
       <DependentUpon>ИПиП.cs</DependentUpon>
     </Compile>
+    <Compile Include="ИФК.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ИФК.Designer.cs">
+      <DependentUpon>ИФК.cs</DependentUpon>
+    </Compile>
     <Compile Include="ФизТех.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ИПиП.resx">
       <DependentUpon>ИПиП.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИФК.resx">
+      <DependentUpon>ИФК.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ФизТех.resx">
       <DependentUpon>ФизТех.cs</DependentUpon>
