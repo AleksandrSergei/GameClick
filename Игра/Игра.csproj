@@ -104,6 +104,12 @@
     <Compile Include="ИМиКН.Designer.cs">
       <DependentUpon>ИМиКН.cs</DependentUpon>
     </Compile>
+    <Compile Include="ИнБио.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ИнБио.Designer.cs">
+      <DependentUpon>ИнБио.cs</DependentUpon>
+    </Compile>
     <Compile Include="ФизТех.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ИМиКН.resx">
       <DependentUpon>ИМиКН.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИнБио.resx">
+      <DependentUpon>ИнБио.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ФизТех.resx">
       <DependentUpon>ФизТех.cs</DependentUpon>
