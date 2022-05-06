@@ -245,6 +245,7 @@ namespace Игра
 
             timer1.Start();
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             s -= 1;
@@ -409,7 +410,7 @@ namespace Игра
                         richTextBox1.Text = "Сдать экзамен по 'Истории государсвеного управления':\n300 свитков\n280 книг\n140 листов\nУ вас есть 6 минут!";
                         button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка свиток.png");
                         button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
+                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)

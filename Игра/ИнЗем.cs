@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Игра
 {
-    public partial class ИИиПН : Form
+    public partial class ИнЗем : Form
     {
-        public ИИиПН()
+        private int book = 0;
+        private int sheet = 0;
+        private int pencil = 0;
+        private int brain = 0;
+        
+        public ИнЗем()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -98,17 +98,29 @@
     <Compile Include="ИГиП.Designer.cs">
       <DependentUpon>ИГиП.cs</DependentUpon>
     </Compile>
-    <Compile Include="ИИиПН.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ИИиПН.Designer.cs">
-      <DependentUpon>ИИиПН.cs</DependentUpon>
-    </Compile>
     <Compile Include="ИМиКН.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ИМиКН.Designer.cs">
       <DependentUpon>ИМиКН.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ИнБио.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ИнБио.Designer.cs">
+      <DependentUpon>ИнБио.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ИнЗем.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ИнЗем.Designer.cs">
+      <DependentUpon>ИнЗем.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ФизТех.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ФизТех.Designer.cs">
+      <DependentUpon>ФизТех.cs</DependentUpon>
     </Compile>
     <Compile Include="ФЭИ.cs">
       <SubType>Form</SubType>
@@ -143,6 +155,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ИМиКН.resx">
       <DependentUpon>ИМиКН.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИнБио.resx">
+      <DependentUpon>ИнБио.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ИнЗем.resx">
+      <DependentUpon>ИнЗем.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ФизТех.resx">
+      <DependentUpon>ФизТех.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ФЭИ.resx">
+      <DependentUpon>ФЭИ.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
