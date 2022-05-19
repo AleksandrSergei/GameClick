@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.Exit = new System.Windows.Forms.Button();
+            this.Map = new System.Windows.Forms.Button();
+            this.Play = new System.Windows.Forms.Button();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,14 +54,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Button();
-            this.Map = new System.Windows.Forms.Button();
-            this.Play = new System.Windows.Forms.Button();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,9 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,6 +99,79 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1487, 760);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.pictureBox17);
+            this.panel2.Controls.Add(this.Exit);
+            this.panel2.Controls.Add(this.Map);
+            this.panel2.Controls.Add(this.Play);
+            this.panel2.Controls.Add(this.pictureBox16);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1487, 760);
+            this.panel2.TabIndex = 32;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(35, 344);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(387, 384);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 35;
+            this.pictureBox17.TabStop = false;
+            // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(210)))), ((int)(((byte)(220)))));
+            this.Exit.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold);
+            this.Exit.Location = new System.Drawing.Point(560, 401);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(370, 90);
+            this.Exit.TabIndex = 33;
+            this.Exit.Text = "ВЫХОД";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Map
+            // 
+            this.Map.BackColor = System.Drawing.Color.Yellow;
+            this.Map.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold);
+            this.Map.Location = new System.Drawing.Point(560, 303);
+            this.Map.Margin = new System.Windows.Forms.Padding(4);
+            this.Map.Name = "Map";
+            this.Map.Size = new System.Drawing.Size(370, 90);
+            this.Map.TabIndex = 32;
+            this.Map.Text = "КАРТА";
+            this.Map.UseVisualStyleBackColor = false;
+            this.Map.Click += new System.EventHandler(this.Map_Click);
+            // 
+            // Play
+            // 
+            this.Play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(185)))), ((int)(((byte)(26)))));
+            this.Play.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Play.Location = new System.Drawing.Point(560, 205);
+            this.Play.Margin = new System.Windows.Forms.Padding(4);
+            this.Play.Name = "Play";
+            this.Play.Size = new System.Drawing.Size(370, 90);
+            this.Play.TabIndex = 31;
+            this.Play.Text = "ИГРАТЬ";
+            this.Play.UseVisualStyleBackColor = false;
+            this.Play.Click += new System.EventHandler(this.Play_Click);
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(1038, 13);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(431, 368);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 30;
+            this.pictureBox16.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -283,92 +355,6 @@
             this.timer1.Interval = 4000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.pictureBox17);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.Exit);
-            this.panel2.Controls.Add(this.Map);
-            this.panel2.Controls.Add(this.Play);
-            this.panel2.Controls.Add(this.pictureBox16);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1487, 760);
-            this.panel2.TabIndex = 32;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(1038, 13);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(431, 368);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 30;
-            this.pictureBox16.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(560, 303);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(370, 90);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "ЗАГРУЗКИ";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // Exit
-            // 
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(210)))), ((int)(((byte)(220)))));
-            this.Exit.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold);
-            this.Exit.Location = new System.Drawing.Point(560, 499);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(370, 90);
-            this.Exit.TabIndex = 33;
-            this.Exit.Text = "ВЫХОД";
-            this.Exit.UseVisualStyleBackColor = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // Map
-            // 
-            this.Map.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(46)))));
-            this.Map.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold);
-            this.Map.Location = new System.Drawing.Point(560, 401);
-            this.Map.Margin = new System.Windows.Forms.Padding(4);
-            this.Map.Name = "Map";
-            this.Map.Size = new System.Drawing.Size(370, 90);
-            this.Map.TabIndex = 32;
-            this.Map.Text = "КАРТА";
-            this.Map.UseVisualStyleBackColor = false;
-            this.Map.Click += new System.EventHandler(this.Map_Click);
-            // 
-            // Play
-            // 
-            this.Play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(185)))), ((int)(((byte)(26)))));
-            this.Play.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Play.Location = new System.Drawing.Point(560, 205);
-            this.Play.Margin = new System.Windows.Forms.Padding(4);
-            this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(370, 90);
-            this.Play.TabIndex = 31;
-            this.Play.Text = "ИГРАТЬ";
-            this.Play.UseVisualStyleBackColor = false;
-            this.Play.Click += new System.EventHandler(this.Play_Click);
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(35, 344);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(387, 384);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 35;
-            this.pictureBox17.TabStop = false;
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,6 +369,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -398,9 +387,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,7 +413,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button Map;
         private System.Windows.Forms.Button Play;
