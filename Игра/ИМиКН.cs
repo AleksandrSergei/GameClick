@@ -38,7 +38,7 @@ namespace Игра
             button2.Visible = true;
             button3.Visible = true;
 
-            //Music.pl4.Play();
+            Music.pl4.Play();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -518,7 +518,7 @@ namespace Игра
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //Music.pl4.Stop();
+            Music.pl4.Stop();
             DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите выйти?",
                                                   "Выход",
                                                   MessageBoxButtons.YesNo,
@@ -532,7 +532,7 @@ namespace Игра
             }
             if (dialogResult == DialogResult.No)
             {
-                //Music.pl4.Play();
+                Music.pl4.Play();
             }
         }
 
