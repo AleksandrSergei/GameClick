@@ -34,14 +34,10 @@ namespace Игра
             pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox5.Region = rgn;
             pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            pictureBox6.Region = rgn;
-            pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox7.Region = rgn;
             pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox8.Region = rgn;
             pictureBox8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            pictureBox9.Region = rgn;
-            pictureBox9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox10.Region = rgn;
             pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             pictureBox11.Region = rgn;
@@ -86,14 +82,6 @@ namespace Игра
             Close();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Hide();
-            //Music.pl2.Stop();
-            ФЭИ фэи = new ФЭИ();
-            фэи.ShowDialog();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
@@ -119,37 +107,46 @@ namespace Игра
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ФЭИ фэи = new ФЭИ();
+            фэи.ShowDialog();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
+            Hide();
+            //Music.pl2.Stop();
+            ФизТех физТех = new ФизТех();
+            физТех.ShowDialog();
+            Close();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ИФК иФК = new ИФК();
+            иФК.ShowDialog();
+            Close();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
+            Hide();
+            //Music.pl2.Stop();
+            ИПиП иПиП = new ИПиП();
+            иПиП.ShowDialog();
+            Close();
         }
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
-
+            Hide();
+            //Music.pl2.Stop();
+            ИнЗем инЗем = new ИнЗем();
+            инЗем.ShowDialog();
+            Close();
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -159,11 +156,6 @@ namespace Игра
             ИГиП иГиП = new ИГиП();
             иГиП.ShowDialog();
             Close();
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
