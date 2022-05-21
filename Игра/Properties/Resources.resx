@@ -121,4 +121,148 @@
   <data name="карта" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\фотки\карта.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="кнопка атом" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка атом.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Кнопка банк карта" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\Кнопка банк карта.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка баскет мяч" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка баскет мяч.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка веса" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка веса.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка газета" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка газета.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка газировка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка газировка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка гантели" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка гантели.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка географ карта" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка географ карта.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка гиря" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка гиря.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка глобус" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка глобус.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка голова" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка голова.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка днк" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка днк.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка завтрак" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка завтрак.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка зарядка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка зарядка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Кнопка звонок" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\Кнопка звонок.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка калькулятор" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка калькулятор.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка карандаш" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка карандаш.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка книги2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка книги2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка колбы" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка колбы.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка компас" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка компас.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка кроссовок" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка кроссовок.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка кубок" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка кубок.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка лампочка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка лампочка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка лист" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка лист.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка лист2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка лист2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка марсоход" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка марсоход.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка микроскоп" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка микроскоп.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка мозг" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка мозг.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка монета" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка монета.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка мяч" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка мяч.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка ноутбук" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка ноутбук.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка палатка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка палатка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка папки" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка папки.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Кнопка перевод" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\Кнопка перевод.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка планета" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка планета.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка принтер" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка принтер.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка растение" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка растение.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка свиток" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка свиток.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка скрепка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка скрепка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка спортсмен" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка спортсмен.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка статистика" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка статистика.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка судейский молот" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка судейский молот.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка тетрадь" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка тетрадь.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка ученики" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка ученики.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Кнопка учитель" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\Кнопка учитель.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка фрукты" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка фрукты.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка человек" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка человек.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="кнопка яблоко" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\фотки\кнопка яблоко.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -39,8 +39,6 @@ namespace Игра
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,7 +54,7 @@ namespace Игра
             this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::Игра.Properties.Resources.кнопка_баскет_мяч;
             this.button1.Location = new System.Drawing.Point(68, 428);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
@@ -142,36 +140,12 @@ namespace Игра
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.label6.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
-            this.label6.Location = new System.Drawing.Point(110, 239);
+            this.label6.Location = new System.Drawing.Point(63, 239);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 28);
             this.label6.TabIndex = 124;
             this.label6.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
-            this.label5.Location = new System.Drawing.Point(74, 239);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 28);
-            this.label5.TabIndex = 123;
-            this.label5.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 239);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 28);
-            this.label4.TabIndex = 122;
-            this.label4.Text = "0";
             // 
             // richTextBox1
             // 
@@ -182,12 +156,12 @@ namespace Игра
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(565, 196);
             this.richTextBox1.TabIndex = 121;
-            this.richTextBox1.Text = "Тренировка по баскетболу:\n100 мячей\n70 кроссовок\n30 мозгов\nУ вас есть 40 секунд!";
+            this.richTextBox1.Text = "";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::Игра.Properties.Resources.кнопка_мозг;
             this.button3.Location = new System.Drawing.Point(1263, 299);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
@@ -199,7 +173,7 @@ namespace Игра
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::Игра.Properties.Resources.кнопка_кроссовок;
             this.button2.Location = new System.Drawing.Point(722, 446);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 160);
@@ -248,8 +222,6 @@ namespace Игра
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -274,8 +246,6 @@ namespace Игра
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

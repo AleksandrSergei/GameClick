@@ -214,5 +214,149 @@
   <ItemGroup>
     <None Include="bin\Debug\фотки\карта.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка атом.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\Кнопка банк карта.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка баскет мяч.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка веса.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка газета.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка газировка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка гантели.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка географ карта.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка гиря.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка глобус.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка голова.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка днк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка завтрак.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка зарядка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\Кнопка звонок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка калькулятор.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка карандаш.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка книги2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка колбы.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка компас.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка кроссовок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка кубок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка лампочка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка лист.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка лист2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка марсоход.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка микроскоп.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка мозг.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка монета.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка мяч.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка ноутбук.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка палатка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка папки.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\Кнопка перевод.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка планета.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка принтер.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка растение.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка свиток.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка скрепка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка спортсмен.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка статистика.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка судейский молот.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка тетрадь.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка ученики.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\Кнопка учитель.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка фрукты.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка человек.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\фотки\кнопка яблоко.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
