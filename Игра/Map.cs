@@ -17,7 +17,7 @@ namespace Игра
         public Map()
         {
             InitializeComponent();
-            //Music.pl2.Play();
+            Music.pl2.Play();
             this.Load += new EventHandler(Form1_Load);
             
         }
@@ -76,7 +76,7 @@ namespace Игра
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ИМиКН иМиКН = new ИМиКН();
             иМиКН.ShowDialog();
             Close();
@@ -85,7 +85,7 @@ namespace Игра
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             Game game = new Game();
             game.ShowDialog();
             Close();
@@ -94,7 +94,7 @@ namespace Игра
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ИнБио инБио = new ИнБио();
             инБио.ShowDialog();
             Close();
@@ -108,7 +108,7 @@ namespace Игра
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ФЭИ фэи = new ФЭИ();
             фэи.ShowDialog();
         }
@@ -116,7 +116,7 @@ namespace Игра
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ФизТех физТех = new ФизТех();
             физТех.ShowDialog();
             Close();
@@ -125,7 +125,7 @@ namespace Игра
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ИФК иФК = new ИФК();
             иФК.ShowDialog();
             Close();
@@ -134,7 +134,7 @@ namespace Игра
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ИПиП иПиП = new ИПиП();
             иПиП.ShowDialog();
             Close();
@@ -143,7 +143,7 @@ namespace Игра
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ИнЗем инЗем = new ИнЗем();
             инЗем.ShowDialog();
             Close();
@@ -152,7 +152,7 @@ namespace Игра
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             Hide();
-            //Music.pl2.Stop();
+            Music.pl2.Stop();
             ИГиП иГиП = new ИГиП();
             иГиП.ShowDialog();
             Close();

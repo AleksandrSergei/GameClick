@@ -12,23 +12,42 @@ namespace Игра
 {
     public partial class ИМиКН : Form
     {
-        private int book = 0;
-        private int sheet = 0;
-        private int printer = 0;
-        private int laptop = 0;
-        private int brain = 0;
-        private int pencil = 0;
-        private int calculator = 0;
-        private int ball = 0;
-        private int athlete = 0;
-        private int dumbbells = 0;
-        private int breakfast = 0;
-        private int fruits = 0;
-        private int soda = 0;
+        private int[] number_of_clicks = new int[13]; // количество нажатий на кнопку
 
-        private int h = 0, m = 0, s = 0;
+        // Названия для label
+        private string[] label_names = { "книг", "листов", "карандашей", "мозгов", "ноутбуков", "принтеров", "калькуляторов", "мячей", "спортсменов", "гирь", "завтраков", "фруктов", "газировок" };
+        
+        // Названия для пути к кнопкам
+        private string[] path_names = { "книги2", "лист2", "карандаш", "мозг", "ноутбук", "принтер", "калькулятор", "мяч", "спортсмен", "гиря", "завтрак", "фрукты", "газировка" };
+        
+        // Задания 
+        private string[] tasks = { "Тебе нужно написать реферат по математике", "Сделать лабораторную работу по информатике", "Придти и прослушать лекцию по программированию", "Решить задачу по дискретной математике",
+            "Сделать практику по компьютерной безопасности", "Написать контрольную по базам данных", "Пора позаниматься спортом, пара физкультуры", "После успешной тренировки, нужно подкрепиться",
+            "Нужно подготовить презентация по информационным системам", "Сдать зачет по программированию"};
+        
+        // Номер кнопок по уровням
+        private int[,] number_button = { { 0, 1, 5 },
+                                        { 4, 3, 2 },
+                                        { 0, 1, 5 },
+                                        { 6, 1, 3 },
+                                        { 0, 3, 5 },
+                                        { 4, 1, 2 },
+                                        { 7, 8, 9 },
+                                        { 10, 11, 12 },
+                                        { 4, 3, 5 },
+                                        { 4, 1, 2 }};
 
-        private int level = 1;
+        private int s = 0; // количесво секунд
+
+        private int level = 1; // уровень
+
+        private int k = 3; // сложность
+
+        private int k_level = 10; // количество уровней
+
+        private int[] time_s = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }; // массив с секундами на каждый уровень
+
+        private int[,] number_clicks = new int[10, 3]; // массив для количества кликов на каждую кнопку и каждый уровень
 
         public ИМиКН()
         {
@@ -38,428 +57,231 @@ namespace Игра
             button2.Visible = true;
             button3.Visible = true;
 
-            //Music.pl4.Play();
+            Random rnd = new Random();
+
+            for (int i = 0; i < k_level; i++)
+            {
+                int max = time_s[i] * k;
+                number_clicks[i, 0] = rnd.Next(1, max / 2);
+                max -= number_clicks[i, 0];
+                number_clicks[i, 1] = rnd.Next(1, max / 2);
+                max -= number_clicks[i, 1];
+                number_clicks[i, 2] = max;
+            }
+            richTextBox1.Text = $"{tasks[level - 1]}:\n{number_clicks[level - 1, 0]} {label_names[number_button[0, 0]]}\n" +
+                $"{number_clicks[level - 1, 1]} {label_names[number_button[0, 1]]}\n" +
+                $"{number_clicks[level - 1, 2]} {label_names[number_button[0, 2]]}\nУ вас есть {time_s[level - 1]} секунд!";
+            label1.Text = $"Кол-во {label_names[number_button[0, 0]]}: 0";
+            label2.Text = $"Кол-во {label_names[number_button[0, 1]]}: 0";
+            label3.Text = $"Кол-во {label_names[number_button[0, 2]]}: 0";
+
+            Music.pl4.Play();
+        }
+
+        void button(int n_button)
+        {
+            int n = 0;
+            switch (level)
+            {
+                case 1: n = number_button[0, n_button]; break;
+                case 2: n = number_button[1, n_button]; break;
+                case 3: n = number_button[2, n_button]; break;
+                case 4: n = number_button[3, n_button]; break;
+                case 5: n = number_button[4, n_button]; break;
+                case 6: n = number_button[5, n_button]; break;
+                case 7: n = number_button[6, n_button]; break;
+                case 8: n = number_button[7, n_button]; break;
+                case 9: n = number_button[8, n_button]; break;
+                case 10: n = number_button[9, n_button]; break;
+            }
+
+            if (number_of_clicks[n] < number_clicks[level - 1, n_button])
+            {
+                number_of_clicks[n]++;
+                switch (n_button)
+                {
+                    case 0: label1.Text = $"Кол-во {label_names[n]}: {number_of_clicks[n]}"; break;
+                    case 1: label2.Text = $"Кол-во {label_names[n]}: {number_of_clicks[n]}"; break;
+                    case 2: label3.Text = $"Кол-во {label_names[n]}: {number_of_clicks[n]}"; break;
+                }
+            }
+            else if (number_of_clicks[n] == number_clicks[level - 1, n_button]) MessageBox.Show($"Вы набрали нужное количество {label_names[n]}!");
+        }
+
+        void button_update(int n_1, int n_2, int n_3)
+        {
+            s = time_s[level - 1];
+            number_of_clicks[n_1] = 0; number_of_clicks[n_2] = 0; number_of_clicks[n_3] = 0;
+            label1.Text = $"Кол-во {label_names[n_1]}: 0";
+            label2.Text = $"Кол-во {label_names[n_2]}: 0";
+            label3.Text = $"Кол-во {label_names[n_3]}: 0";
+        }
+
+        void level_processing(int o_1, int o_2, int o_3, int n_1, int n_2, int n_3)
+        {
+            if (number_of_clicks[o_1] == number_clicks[level - 1, 0] && number_of_clicks[o_2] == number_clicks[level - 1, 1] && 
+                number_of_clicks[o_3] == number_clicks[level - 1, 2] && s > 0)
+            {
+                timer1.Stop();
+                DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
+                                                        "Уровень пройден",
+                                                        MessageBoxButtons.OK,
+                                                        MessageBoxIcon.Information,
+                                                        MessageBoxDefaultButton.Button1);
+
+                if (dialog == DialogResult.OK)
+                {
+                    number_of_clicks[n_1] = 0; number_of_clicks[n_2] = 0; number_of_clicks[n_3] = 0;
+
+                    s = 0;
+                    level += 1;
+                    label1.Text = $"Кол-во {label_names[n_1]}: 0";
+                    label2.Text = $"Кол-во {label_names[n_2]}: 0";
+                    label3.Text = $"Кол-во {label_names[n_3]}: 0";
+                    richTextBox1.Text = $"{tasks[level - 1]}:\n{number_clicks[level - 1, 0]} {label_names[n_1]}\n{number_clicks[level - 1, 1]} {label_names[n_2]}\n{number_clicks[level - 1, 2]} {label_names[n_3]}\nУ вас есть {time_s[level - 1]} секунд!";
+                    button1.Image = Image.FromFile($"фотки\\кнопка {path_names[n_1]}.png");
+                    button2.Image = Image.FromFile($"фотки\\кнопка {path_names[n_2]}.png");
+                    button3.Image = Image.FromFile($"фотки\\кнопка {path_names[n_3]}.png");
+                }
+            }
+            else if (s == 0)
+            {
+                timer1.Stop();
+                DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: {label_names[o_1]} {number_of_clicks[o_1]}, {label_names[o_3]} {number_of_clicks[o_2]}, {label_names[o_3]} {number_of_clicks[o_3]}.",
+                                                        "Время вышло!",
+                                                        MessageBoxButtons.OK,
+                                                        MessageBoxIcon.Information,
+                                                        MessageBoxDefaultButton.Button1);
+
+                if (dialog == DialogResult.OK)
+                {
+                    number_of_clicks[o_1] = 0; number_of_clicks[o_2] = 0; number_of_clicks[o_3] = 0;
+                    s = 0;
+                    label1.Text = $"Кол-во {label_names[o_1]} : 0";
+                    label2.Text = $"Кол-во {label_names[o_2]} : 0";
+                    label3.Text = $"Кол-во {label_names[o_3]} : 0";
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (level == 1)
-            {
-                if (book < 5)
-                {
-                    book++;
-                    label1.Text = $"Кол-во книг: {book}";
-                }
-                else if (book == 5) MessageBox.Show("Вы набрали нужное количество книг!");
-            }
-
-            else if (level == 2)
-            {
-                if (laptop < 20)
-                {
-                    laptop++;
-                    label1.Text = $"Кол-во ноутбуков: {laptop}";
-                }
-                else if (laptop == 20) MessageBox.Show("Вы набрали нужное количество ноутбуков!");
-            }
-
-            else if (level == 3)
-            {
-                if (book < 30)
-                {
-                    book++;
-                    label1.Text = $"Кол-во книг: {book}";
-                }
-                else if (book == 30) MessageBox.Show("Вы набрали нужное количество книг!");
-            }
-
-            else if (level == 4)
-            {
-                if (calculator < 50)
-                {
-                    calculator++;
-                    label1.Text = $"Кол-во калькуляторов: {calculator}";
-                }
-                else if (calculator == 50) MessageBox.Show("Вы набрали нужное количество калькуляторов!");
-            }
-
-            else if (level == 5)
-            {
-                if (book < 70)
-                {
-                    book++;
-                    label1.Text = $"Кол-во книг: {book}";
-                }
-                else if (book == 70) MessageBox.Show("Вы набрали нужное количество книг!");
-            }
-
-            else if (level == 6)
-            {
-                if (book < 100)
-                {
-                    book++;
-                    label1.Text = $"Кол-во книг: {book}";
-                }
-                else if (book == 100) MessageBox.Show("Вы набрали нужное количество книг!");
-            }
-
-            else if (level == 7)
-            {
-                if (ball < 150)
-                {
-                    ball++;
-                    label1.Text = $"Кол-во мячей: {ball}";
-                }
-                else if (ball == 150) MessageBox.Show("Вы набрали нужное количество мячей!");
-            }
-
-            else if (level == 8)
-            {
-                if (breakfast < 80)
-                {
-                    breakfast++;
-                    label1.Text = $"Кол-во завтраков: {breakfast}";
-                }
-                else if (breakfast == 80) MessageBox.Show("Вы набрали нужное количество завтраков!");
-            }
-
-            else if (level == 9)
-            {
-                if (book < 150)
-                {
-                    book++;
-                    label1.Text = $"Кол-во книг: {book}";
-                }
-                else if (book == 150) MessageBox.Show("Вы набрали нужное количество книг!");
-            }
-
-            else if (level == 10)
-            {
-                if (laptop < 250)
-                {
-                    laptop++;
-                    label1.Text = $"Кол-во ноутбуков: {laptop}";
-                }
-                else if (laptop == 250) MessageBox.Show("Вы набрали нужное количество ноутбуков!");
-            }
+            button(0);
         }
     
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (level == 1)
-            {
-                if (sheet < 10)
-                {
-                    sheet++;
-                    label2.Text = $"Кол-во листов: {sheet}";
-                }
-                else if (sheet == 10) MessageBox.Show("Вы набрали нужное количество листов!");
-            }
-
-            else if (level == 2)
-            {
-                if (brain < 30)
-                {
-                    brain++;
-                    label2.Text = $"Кол-во мозгов: {brain}";
-                }
-                else if (brain == 30) MessageBox.Show("Вы набрали нужное количество мозгов!");
-            }
-
-            else if (level == 3)
-            {
-                if (sheet < 40)
-                {
-                    sheet++;
-                    label2.Text = $"Кол-во листов: {sheet}";
-                }
-                else if (sheet == 40) MessageBox.Show("Вы набрали нужное количество листов!");
-            }
-
-            else if (level == 4)
-            {
-                if (sheet < 60)
-                {
-                    sheet++;
-                    label2.Text = $"Кол-во листов: {sheet}";
-                }
-                else if (sheet == 60) MessageBox.Show("Вы набрали нужное количество листов!");
-            }
-
-            else if (level == 5)
-            {
-                if (laptop < 80)
-                {
-                    laptop++;
-                    label2.Text = $"Кол-во ноутбуков: {laptop}";
-                }
-                else if (laptop == 80) MessageBox.Show("Вы набрали нужное количество ноутбуков!");
-            }
-
-            else if (level == 6)
-            {
-                if (sheet < 120)
-                {
-                    sheet++;
-                    label2.Text = $"Кол-во листов: {sheet}";
-                }
-                else if (sheet == 120) MessageBox.Show("Вы набрали нужное количество листов!");
-            }
-
-            else if (level == 7)
-            {
-                if (athlete < 90)
-                {
-                    athlete++;
-                    label2.Text = $"Кол-во спортсменов: {athlete}";
-                }
-                else if (athlete == 90) MessageBox.Show("Вы набрали нужное количество спортсменов!");
-            }
-
-            else if (level == 8)
-            {
-                if (fruits < 40)
-                {
-                    fruits++;
-                    label2.Text = $"Кол-во фруктов: {fruits}";
-                }
-                else if (fruits == 40) MessageBox.Show("Вы набрали нужное количество фруктов!");
-            }
-
-            else if (level == 9)
-            {
-                if (laptop < 200)
-                {
-                    laptop++;
-                    label2.Text = $"Кол-во ноутбуков: {laptop}";
-                }
-                else if (laptop == 200) MessageBox.Show("Вы набрали нужное количество ноутбуков!");
-            }
-
-            else if (level == 10)
-            {
-                if (sheet < 200)
-                {
-                    sheet++;
-                    label2.Text = $"Кол-во листов: {sheet}";
-                }
-                else if (sheet == 200) MessageBox.Show("Вы набрали нужное количество листов!");
-            }
+            button(1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (level == 1)
-            {
-                if (printer < 1)
-                {
-                    printer++;
-                    label3.Text = $"Кол-во принтеров: {printer}";
-                }
-                else if (printer == 1) MessageBox.Show("Вы набрали нужное количество принтеров!");
-            }
-
-            else if (level == 2)
-            {
-                if (pencil < 10)
-                {
-                    pencil++;
-                    label3.Text = $"Кол-во карандашей: {pencil}";
-                }
-                else if (pencil == 10) MessageBox.Show("Вы набрали нужное количество карандашей!");
-            }
-
-            else if (level == 4)
-            {
-                if (pencil < 40)
-                {
-                    pencil++;
-                    label3.Text = $"Кол-во карандашей: {pencil}";
-                }
-                else if (pencil == 40) MessageBox.Show("Вы набрали нужное количество карандашей!");
-            }
-
-            else if (level == 6)
-            {
-                if (pencil < 80)
-                {
-                    pencil++;
-                    label3.Text = $"Кол-во карандашей: {pencil}";
-                }
-                else if (pencil == 80) MessageBox.Show("Вы набрали нужное количество карандашей!");
-            }
-
-            else if (level == 7)
-            {
-                if (dumbbells < 30)
-                {
-                    dumbbells++;
-                    label3.Text = $"Кол-во гантелей: {dumbbells}";
-                }
-                else if (dumbbells == 30) MessageBox.Show("Вы набрали нужное количество гантелей!");
-            }
-
-            else if (level == 8)
-            {
-                if (soda < 90)
-                {
-                    soda++;
-                    label3.Text = $"Кол-во газировки: {soda}";
-                }
-                else if (soda == 90) MessageBox.Show("Вы набрали нужное количество газировки!");
-            }
-
-            else if (level == 9)
-            {
-                if (printer < 60)
-                {
-                    printer++;
-                    label3.Text = $"Кол-во принтеров: {printer}";
-                }
-                else if (printer == 60) MessageBox.Show("Вы набрали нужное количество принтеров!");
-            }
-
-            else if (level == 10)
-            {
-                if (pencil < 190)
-                {
-                    pencil++;
-                    label3.Text = $"Кол-во карандашей: {pencil}";
-                }
-                else if (pencil == 190) MessageBox.Show("Вы набрали нужное количество карандашей!");
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (level == 6)
-            {
-                if (brain < 90)
-                {
-                    brain++;
-                    label9.Text = $"Кол-во мозгов: {brain}";
-                }
-                else if (brain == 90) MessageBox.Show("Вы набрали нужное количество мозгов!");
-            }
-
-            else if (level == 9)
-            {
-                if (brain < 160)
-                {
-                    brain++;
-                    label9.Text = $"Кол-во мозгов: {brain}";
-                }
-                else if (brain == 160) MessageBox.Show("Вы набрали нужное количество мозгов!");
-            }
-
-            else if (level == 10)
-            {
-                if (brain < 300)
-                {
-                    brain++;
-                    label9.Text = $"Кол-во мозгов: {brain}";
-                }
-                else if (brain == 300) MessageBox.Show("Вы набрали нужное количество мозгов!");
-            }
+            button(2);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (level == 1)
+            switch (level)
             {
-                h = 0; m = 0; s = 10;
-                book = 0; sheet = 0; printer = 0;
-                label1.Text = $"Кол-во книг: {book}";
-                label2.Text = $"Кол-во листов: {sheet}";
-                label3.Text = $"Кол-во принтеров: {printer}";
-            }
-
-            else if (level == 2)
-            {
-                h = 0; m = 0; s = 30;
-                laptop = 0; brain = 0; pencil = 0;
-                label1.Text = $"Кол-во ноутбуков: {laptop}";
-                label2.Text = $"Кол-во мозгов: {brain}";
-                label3.Text = $"Кол-во карандашей: {pencil}";
-            }
-
-            else if (level == 3)
-            {
-                h = 0; m = 0; s = 30;
-                book = 0; sheet = 0;
-                label1.Text = $"Кол-во книг: {book}";
-                label2.Text = $"Кол-во листов: {sheet}";
-                label3.Text = $"";
-            }
-
-            else if (level == 4)
-            {
-                h = 0; m = 0; s = 50;
-                calculator = 0; sheet = 0; pencil = 0;
-                label1.Text = $"Кол-во калькуляторов: {calculator}";
-                label2.Text = $"Кол-во листов: {sheet}";
-                label3.Text = $"Кол-во карандашей: {pencil}";
-            }
-
-            else if (level == 5)
-            {
-                h = 0; m = 0; s = 50;
-                book = 0; laptop = 0;
-                label1.Text = $"Кол-во книг: {book}";
-                label2.Text = $"Кол-во ноутбуков: {laptop}";
-                label3.Text = $"";
-            }
-
-            else if (level == 6)
-            {
-                h = 0; m = 1; s = 40;
-                book = 0; sheet = 0; pencil = 0; brain = 0;
-                label1.Text = $"Кол-во книг: {book}";
-                label2.Text = $"Кол-во листов: {sheet}";
-                label3.Text = $"Кол-во карандашей: {pencil}";
-                label9.Text = $"Кол-во мозгов: {brain}";
-            }
-
-            else if (level == 7)
-            {
-                h = 0; m = 2; s = 30;
-                ball = 0; athlete = 0; dumbbells = 0;
-                label1.Text = $"Кол-во мячей: {ball}";
-                label2.Text = $"Кол-во спортсменов: {athlete}";
-                label3.Text = $"Кол-во гантелей: {dumbbells}";
-            }
-
-            else if (level == 8)
-            {
-                h = 0; m = 1; s = 40;
-                breakfast = 0; fruits = 0; soda = 0;
-                label1.Text = $"Кол-во завтраков: {breakfast}";
-                label2.Text = $"Кол-во фруктов: {fruits}";
-                label3.Text = $"Кол-во газировки: {soda}";
-            }
-
-            else if (level == 9)
-            {
-                h = 0; m = 2; s = 50;
-                book = 0; laptop = 0; printer = 0; brain = 0;
-                label1.Text = $"Кол-во книг: {book}";
-                label2.Text = $"Кол-во ноутбуков: {laptop}";
-                label3.Text = $"Кол-во принтеров: {printer}";
-                label9.Text = $"Кол-во мозгов: {brain}";
-            }
-
-            else if (level == 10)
-            {
-                h = 0; m = 3; s = 20;
-                laptop = 0; sheet = 0; pencil = 0; brain = 0;
-                label1.Text = $"Кол-во ноутбуков: {laptop}";
-                label2.Text = $"Кол-во листов: {sheet}";
-                label3.Text = $"Кол-во карандашей: {pencil}";
-                label9.Text = $"Кол-во мозгов: {brain}";
+                case 1: button_update(number_button[0, 0], number_button[0, 1], number_button[0, 2]); break;
+                case 2: button_update(number_button[1, 0], number_button[1, 1], number_button[1, 2]); break;
+                case 3: button_update(number_button[2, 0], number_button[2, 1], number_button[2, 2]); break;
+                case 4: button_update(number_button[3, 0], number_button[3, 1], number_button[3, 2]); break;
+                case 5: button_update(number_button[4, 0], number_button[4, 1], number_button[4, 2]); break;
+                case 6: button_update(number_button[5, 0], number_button[5, 1], number_button[5, 2]); break;
+                case 7: button_update(number_button[6, 0], number_button[6, 1], number_button[6, 2]); break;
+                case 8: button_update(number_button[7, 0], number_button[7, 1], number_button[7, 2]); break;
+                case 9: button_update(number_button[8, 0], number_button[8, 1], number_button[8, 2]); break;
+                case 10: button_update(number_button[9, 0], number_button[9, 1], number_button[9, 2]); break;
             }
 
             timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int n;
+            s -= 1;
+            switch (level)
+            {
+                case 1: n = 0; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 2: n = 1; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 3: n = 2; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 4: n = 3; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 5: n = 4; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 6: n = 5; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 7: n = 6; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 8: n = 7; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 9: n = 8; level_processing(number_button[n, 0], number_button[n, 1], number_button[n, 2], number_button[n+1, 0], number_button[n+1, 1], number_button[n+1, 2]); break;
+                case 10:
+                    int n_1 = number_button[9, 0];
+                    int n_2 = number_button[9, 1];
+                    int n_3 = number_button[9, 2];
+                    if (number_of_clicks[n_1] == number_clicks[level - 1, 0] && number_of_clicks[n_2] == number_clicks[level - 1, 1] && number_of_clicks[n_3] == number_clicks[level - 1, 2] && s > 0)
+                    {
+                        timer1.Stop();
+                        DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
+                                                          "Институт пройден!",
+                                                          MessageBoxButtons.OK,
+                                                          MessageBoxIcon.Information,
+                                                          MessageBoxDefaultButton.Button1);
+                        if (dialog == DialogResult.OK)
+                        {
+                            number_of_clicks[n_1] = 0; number_of_clicks[n_2] = 0; number_of_clicks[n_3] = 0;
+                            s = 0;
+                            level = 1;
+                            label1.Text = $"";
+                            label2.Text = $"";
+                            label3.Text = $"";
+                            richTextBox1.Text = "Институт пройден !!!";
+                            button1.Visible = false;
+                            button2.Visible = false;
+                            button3.Visible = false;
+                        }
+                    }
+                    else if (s == 0)
+                    {
+                        timer1.Stop();
+                        DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: {label_names[n_1]} {number_of_clicks[n_1]}, {label_names[n_3]} {number_of_clicks[n_2]}, {label_names[n_3]} {number_of_clicks[n_3]}.",
+                                                        "Время вышло!",
+                                                        MessageBoxButtons.OK,
+                                                        MessageBoxIcon.Information,
+                                                        MessageBoxDefaultButton.Button1);
+
+                        if (dialog == DialogResult.OK)
+                        {
+                            number_of_clicks[n_1] = 0; number_of_clicks[n_2] = 0; number_of_clicks[n_3] = 0;
+                            s = 0;
+                            label1.Text = $"Кол-во {label_names[n_1]} : 0";
+                            label2.Text = $"Кол-во {label_names[n_2]} : 0";
+                            label3.Text = $"Кол-во {label_names[n_3]} : 0";
+                        }
+                    }
+                    break;
+            }
+
+            label6.Text = Convert.ToString(s);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Music.pl4.Stop();
+            DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите выйти?",
+                                                  "Выход",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Information,
+                                                  MessageBoxDefaultButton.Button2);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Hide();
+                Map map = new Map();
+                map.ShowDialog();
+            }
+            if (dialogResult == DialogResult.No)
+            {
+                Music.pl4.Play();
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -509,500 +331,6 @@ namespace Игра
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            //Music.pl4.Stop();
-            DialogResult dialogResult = MessageBox.Show($"Вы действительно хотите выйти?",
-                                                  "Выход",
-                                                  MessageBoxButtons.YesNo,
-                                                  MessageBoxIcon.Information,
-                                                  MessageBoxDefaultButton.Button2);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Hide();
-                Map map = new Map();
-                map.ShowDialog();
-            }
-            if (dialogResult == DialogResult.No)
-            {
-                //Music.pl4.Play();
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            s -= 1;
-            if(s == -1)
-            {
-                m -= 1;
-                s = 59;
-            }
-            if(m == -1)
-            {
-                h -= 1;
-                m = 59;
-            }
-
-            if (level == 1)
-            {
-                if ((book == 5 && sheet == 10 && printer == 1) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; sheet = 0; printer = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 2;
-                        label1.Text = $"Кол-во ноутбуков: {laptop}";
-                        label2.Text = $"Кол-во мозгов: {brain}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        richTextBox1.Text = "Сделать лабораторную работу по информатике:\n20 ноутбуков\n30 мозгов\n10 карандашей\nУ вас есть 30 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка ноутбук.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка карандаш.png");
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, листов {sheet}, принтеров {printer}.",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; sheet = 0; printer = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во принтеров: {printer}";
-                    }
-                }
-            }
-
-            else if (level == 2)
-            {
-                if ((laptop == 20 && brain == 30 && pencil ==10) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        laptop = 0; brain = 0; pencil = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 3;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"";
-                        richTextBox1.Text = "Придти и прослушать лекцию по программированию:\n30 книг\n40 листов\nУ вас есть 30 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
-                        button3.Visible = false;
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: ноутбуков {laptop}, мозгов {brain}, карандашей {pencil}.",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        laptop = 0; brain = 0; pencil = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во ноутбуков: {laptop}";
-                        label2.Text = $"Кол-во мозгов: {brain}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                    }
-                }
-            }
-
-            else if (level == 3)
-            {
-                if ((book == 30 && sheet == 40) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; sheet = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 4;
-                        label1.Text = $"Кол-во калькуляторов: {calculator}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        richTextBox1.Text = "Решить задачу по дискретной математике:\n50 калькуляторов\n60 листов\n40 карандашей\nУ вас есть 30 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка калькулятор.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
-                        button3.Visible = true;
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка карандаш.png");
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, листов {sheet}.",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; sheet = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"";
-                    }
-                }
-            }
-
-            else if (level == 4)
-            {
-                if ((calculator == 50 && sheet == 60 && pencil == 40) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        calculator = 0; sheet = 0; pencil = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 5;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во ноутбуков: {laptop}";
-                        label3.Text = $"";
-                        richTextBox1.Text = "Сделать практику по компьютерной безопасности:\n70 книг\n80 ноутбуков\nУ вас есть 50 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка ноутбук.png");
-                        button3.Visible = false;
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: калькуляторов {calculator}, листов {sheet}, карандашей {pencil}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        calculator = 0; sheet = 0; pencil = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во калькуляторов: {calculator}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                    }
-                }
-            }
-
-            else if (level == 5)
-            {
-                if ((book == 70 && laptop == 80) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; laptop = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 6;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        label9.Text = $"Кол-во мозгов: {brain}";
-                        richTextBox1.Text = "Написать контрольную по базам данных:\n100 книг\n120 листов\n80 карандашей\n90 мозгов\nУ вас есть 1 минута и 40 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
-                        button3.Visible = true;
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка карандаш.png");
-                        button5.Visible = true;
-                        button5.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, ноутбуков {laptop}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; laptop = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во ноутбуков: {laptop}";
-                        label3.Text = $"";
-                    }
-                }
-            }
-
-            else if (level == 6)
-            {
-                if ((book == 100 && sheet == 120 && pencil == 80 && brain == 90) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; sheet = 0;  pencil = 0; brain = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 7;
-                        label1.Text = $"Кол-во мячей: {ball}";
-                        label2.Text = $"Кол-во спортсменов: {athlete}";
-                        label3.Text = $"Кол-во гантелей: {dumbbells}";
-                        label9.Text = $"";
-                        richTextBox1.Text = "Пора позаниматься спортом, пара физкультуры:\n150 мячей\n90 спортсменов\n30 гантелей\nУ вас есть 2 минута и 30 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мяч.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка спортсмен.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка гантели.png");
-                        button5.Visible = false;
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, листов {sheet}, карандашей {pencil}, мозгов {brain}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; sheet = 0; pencil = 0; brain = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        label9.Text = $"Кол-во мозгов: {brain}";
-                    }
-                }
-            }
-
-            else if (level == 7)
-            {
-                if ((ball == 150 && athlete == 90 && dumbbells == 30) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        ball = 0; athlete = 0; dumbbells = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 8;
-                        label1.Text = $"Кол-во завтраков: {breakfast}";
-                        label2.Text = $"Кол-во фруктов: {fruits}";
-                        label3.Text = $"Кол-во газировки: {soda}";
-                        label9.Text = $"";
-                        richTextBox1.Text = "После успешной тренировки, нужно подкрепиться:\n80 завтраков\n40 фруктов\n90 газировки\nУ вас есть 1 минута и 40 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка завтрак.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка фрукты.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка газировка.png");
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: мячей {ball}, спортсменов {athlete}, гантелей {dumbbells}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        ball = 0; athlete = 0; dumbbells = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во мячей: {ball}";
-                        label2.Text = $"Кол-во спортсменов: {athlete}";
-                        label3.Text = $"Кол-во гантелей: {dumbbells}";
-                        label9.Text = $"";
-                    }
-                }
-            }
-
-            else if (level == 8)
-            {
-                if ((breakfast == 80 && fruits == 40 && soda == 90) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        breakfast = 0; fruits = 0; soda = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 9;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во ноутбуков: {laptop}";
-                        label3.Text = $"Кол-во принтеров: {printer}";
-                        label9.Text = $"Кол-во мозгов: {brain}";
-                        richTextBox1.Text = "Нужно подготовить презентация по информационным системам:\n150 книг\n200 ноутбуков\n60 принтеров\n160 мозгов\nУ вас есть 2 минута и 50 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка книги2.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка ноутбук.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка принтер.png");
-                        button5.Visible = true;
-                        button5.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: завтраков {breakfast}, фруктов {fruits}, газировки {soda}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        breakfast = 0; fruits = 0; soda = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во завтраков: {breakfast}";
-                        label2.Text = $"Кол-во фруктов: {fruits}";
-                        label3.Text = $"Кол-во газировки: {soda}";
-                        label9.Text = $"";
-                    }
-                }
-            }
-
-            else if (level == 9)
-            {
-                if ((book == 150 && laptop == 200 && printer == 60 && brain == 160) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Уровень пройден",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; laptop = 0; printer = 0; brain = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 10;
-                        label1.Text = $"Кол-во ноутбуков: {laptop}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        label9.Text = $"Кол-во мозгов: {brain}";
-                        richTextBox1.Text = "Сдать зачет по программированию:\n250 ноутбуков\n200 листов\n190 карандашей\n300 мозгов\nУ вас есть 3 минута и 20 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка ноутбук.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка карандаш.png");
-                        button5.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, ноутбуков {laptop}, принтеров {printer}, мозгов {brain}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        book = 0; laptop = 0; printer = 0; brain = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во книг: {book}";
-                        label2.Text = $"Кол-во ноутбуков: {laptop}";
-                        label3.Text = $"Кол-во принтеров: {printer}";
-                        label9.Text = $"Кол-во мозгов: {brain}";
-                    }
-                }
-            }
-
-            else if (level == 10)
-            {
-                if ((laptop == 250 && sheet == 200 && pencil == 190 && brain == 300) && (s > 0 || h > 0 || m > 0))
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
-                                                      "Институт пройден!",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        laptop = 0; sheet = 0; pencil = 0; brain = 0;
-                        h = 0; m = 0; s = 0;
-                        level = 1;
-                        label1.Text = $"";
-                        label2.Text = $"";
-                        label3.Text = $"";
-                        label9.Text = $"";
-                        richTextBox1.Text = "Институт пройден !!!";
-                        button1.Visible = false;
-                        button2.Visible = false;
-                        button3.Visible = false;
-                        button5.Visible = false;
-                    }
-                }
-                else if (h == 0 && m == 0 && s == 0)
-                {
-                    timer1.Stop();
-                    DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: ноутбуков {laptop}, листов {sheet}, карандашей {pencil}, мозгов {brain}",
-                                                      "Время вышло",
-                                                      MessageBoxButtons.OK,
-                                                      MessageBoxIcon.Information,
-                                                      MessageBoxDefaultButton.Button1);
-                    if (dialog == DialogResult.OK)
-                    {
-                        laptop = 0; sheet = 0; pencil = 0; brain = 0;
-                        h = 0; m = 0; s = 0;
-                        label1.Text = $"Кол-во ноутбуков: {laptop}";
-                        label2.Text = $"Кол-во листов: {sheet}";
-                        label3.Text = $"Кол-во карандашей: {pencil}";
-                        label9.Text = $"Кол-во мозгов: {brain}";
-                    }
-                }
-            }
-
-            label4.Text = Convert.ToString(h);
-            label5.Text = Convert.ToString(m);
-            label6.Text = Convert.ToString(s);
         }
     }
 }

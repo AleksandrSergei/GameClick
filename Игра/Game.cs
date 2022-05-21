@@ -97,7 +97,7 @@ namespace Игра
                                                   MessageBoxDefaultButton.Button2);
             if (dialog == DialogResult.Yes)
             {
-                //Music.pl1.Stop();
+                Music.pl1.Stop();
                 global_FormClosed();
             }
         }
