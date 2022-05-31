@@ -91,7 +91,7 @@ namespace Игра
             Close();
         }
 
-        private void pictureBox4_Click_1(object sender, EventArgs e)
+        public void pictureBox4_Click_1(object sender, EventArgs e)
         {
             Hide();
             Music.pl2.Stop();
