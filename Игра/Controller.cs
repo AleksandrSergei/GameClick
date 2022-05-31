@@ -12,9 +12,14 @@ namespace Игра
 {
     public class Controller
     {
-        public static void Labelandsecond_update(Label label1, Label label2, Label label3,
+        public static void Labelandsecond_update(Label label1, Label label2, Label label3, System.Windows.Forms.Timer timer1, 
+            System.Windows.Forms.Timer timer2, System.Windows.Forms.Timer timer3, System.Windows.Forms.Timer timer4,
             int n_1, int n_2, int n_3, Model model)
         {
+            timer1.Start();
+            timer2.Start();
+            timer3.Start();
+            timer4.Start();
             model.sec = model.time_sec[model.level - 1];
             model.number_clicks[n_1] = 0; model.number_clicks[n_2] = 0; model.number_clicks[n_3] = 0;
             View.Label_update(label1, label2, label3, model, n_1, n_2, n_3);
@@ -120,10 +125,13 @@ namespace Игра
             }
         }
 
-        public static void Level_end(Model model, System.Windows.Forms.Timer timer, Label label1, Label label2, Label label3, Button button1, Button button2, Button button3,
+        public static void Level_end(Model model, System.Windows.Forms.Timer timer1, System.Windows.Forms.Timer timer2, System.Windows.Forms.Timer timer3, System.Windows.Forms.Timer timer4, Label label1, Label label2, Label label3, Button button1, Button button2, Button button3,
             RichTextBox richTextBox, int n_1, int n_2, int n_3)
         {
-            timer.Stop();
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
+            timer4.Stop();
             if (model.number_clicks[n_1] == model.number_random_clicks[model.level - 1, 0] && model.number_clicks[n_2] == model.number_random_clicks[model.level - 1, 1] && model.number_clicks[n_3] == model.number_random_clicks[model.level - 1, 2] && model.sec > 0)
             {
                 DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.", "Институт пройден!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
@@ -139,6 +147,10 @@ namespace Игра
             }
             else if (model.sec == 0)
             {
+                timer1.Stop();
+                timer2.Stop();
+                timer3.Stop();
+                timer4.Stop();
                 DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: {model.label_names[n_1]} {model.number_clicks[n_1]}, {model.label_names[n_3]} {model.number_clicks[n_2]}, {model.label_names[n_3]} {model.number_clicks[n_3]}.",
                                                 "Время вышло!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
