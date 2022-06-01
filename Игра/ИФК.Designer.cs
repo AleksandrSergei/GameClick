@@ -54,7 +54,7 @@ namespace Игра
             this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::Игра.Properties.Resources.кнопка_баскет_мяч;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(68, 428);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
@@ -159,7 +159,7 @@ namespace Игра
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button3.Image = global::Игра.Properties.Resources.кнопка_мозг;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(1263, 299);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
@@ -171,7 +171,7 @@ namespace Игра
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button2.Image = global::Игра.Properties.Resources.кнопка_кроссовок;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(722, 446);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 160);

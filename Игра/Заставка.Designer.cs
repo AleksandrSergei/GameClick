@@ -281,6 +281,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Заставка";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заставка";
             this.Load += new System.EventHandler(this.Заставка_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Заставка_KeyDown);
