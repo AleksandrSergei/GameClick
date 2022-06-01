@@ -8,6 +8,7 @@ namespace Игра
 {
     public class Model
     {
+        public int number_institute;
         public int[] number_clicks;
         public string[] label_names;
         public string[] path_names;

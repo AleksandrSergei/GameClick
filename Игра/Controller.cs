@@ -36,7 +36,7 @@ namespace Игра
         {
             int n = model.number_button[model.level - 1, n_button];
 
-            if (model.number_clicks[n] < model.number_random_clicks[model.level - 1, n_button])
+            if (model.number_clicks[n] < model.number_random_clicks[model.level - 1, n_button] && model.sec > 0)
             {
                 model.number_clicks[n]++;
                 Statistics.number_clicks += 1;
@@ -128,7 +128,7 @@ namespace Игра
         }
 
         public static void Level_end(Model model, System.Windows.Forms.Timer timer1, System.Windows.Forms.Timer timer2, System.Windows.Forms.Timer timer3, System.Windows.Forms.Timer timer4, Label label1, Label label2, Label label3, Button button1, Button button2, Button button3,
-            RichTextBox richTextBox, int n_1, int n_2, int n_3, string Image, string Image_block, bool Image_Enabled)
+            RichTextBox richTextBox, int n_1, int n_2, int n_3)
         {
             if (model.number_clicks[n_1] == model.number_random_clicks[model.level - 1, 0] && model.number_clicks[n_2] == model.number_random_clicks[model.level - 1, 1] && model.number_clicks[n_3] == model.number_random_clicks[model.level - 1, 2] && model.sec > 0)
             {
@@ -139,8 +139,14 @@ namespace Игра
                 DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.", "Институт пройден!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 if (dialog == DialogResult.OK)
                 {
-                    Image = Image_block;
-                    Image_Enabled = false;
+                    switch (model.number_institute)
+                    {
+                        case 2:
+                            Button_image_map.Image_IMiKN = Button_image_map.Image_IMiKN_block;
+                            Button_image_map.Image_IMiKN_Enabled = false;
+                            break;
+                    }
+
                     model.number_clicks[n_1] = model.number_clicks[n_2] = model.number_clicks[n_3] = 0;
                     model.sec = 0;
                     model.level = 1;

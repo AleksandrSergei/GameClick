@@ -9,6 +9,7 @@ namespace Игра
         {
             Model model = new Model
             {
+                number_institute = 2,
                 count_levels = 5,
                 complexity = 3,
                 number_clicks = new int[10],
@@ -63,7 +64,7 @@ namespace Игра
                 model_IMiKN.number_button[n, 2], model_IMiKN.number_button[n + 1, 0], model_IMiKN.number_button[n + 1, 1], model_IMiKN.number_button[n + 1, 2]);
             else
                 Controller.Level_end(model_IMiKN, timer_number_seconds, timer_move_button1, timer_move_button2, timer_move_button3, label1_number_clicks_IMiKN, label2_number_clicks_IMiKN, label3_number_clicks_IMiKN, button1_IMiKN, button2_IMiKN, button3_IMiKN, richTextBox__IMiKN, model_IMiKN.number_button[n, 0], model_IMiKN.number_button[n, 1],
-                    model_IMiKN.number_button[n, 2], Button_image_map.Image_IMiKN, Button_image_map.Image_IMiKN_block, Button_image_map.Image_IMiKN_Enabled);
+                    model_IMiKN.number_button[n, 2]);
 
             label_number_seconds_IMiKN.Text = Convert.ToString(model_IMiKN.sec);
         }
