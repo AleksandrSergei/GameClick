@@ -26,4 +26,9 @@ namespace Игра
         public int index_coordinate2 = 0;
         public int index_coordinate3 = 0;
     }
+
+    public static class Statistics
+    {
+        public static int number_clicks = 0;
+    }
 }

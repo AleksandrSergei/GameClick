@@ -39,6 +39,8 @@ namespace Игра
             if (model.number_clicks[n] < model.number_random_clicks[model.level - 1, n_button])
             {
                 model.number_clicks[n]++;
+                Statistics.number_clicks += 1;
+
                 switch (n_button)
                 {
                     case 0: View.Label_output_number_click(label1, model, n, 0); break;
@@ -104,7 +106,7 @@ namespace Игра
                 {
                     Secondandlevel_update(model, n_1, n_2, n_3, true);
                     View.Label_update(label1, label2, label3, model, n_1, n_2, n_3);
-                    View.Task_output(richTextBox, model, model.number_button[0, 0], model.number_button[0, 1], model.number_button[0, 2]);
+                    View.Task_output(richTextBox, model, model.number_button[model.level - 1, 0], model.number_button[model.level - 1, 1], model.number_button[model.level - 1, 2]);
                     View.Button_update(button1, button2, button3, model, n_1, n_2, n_3);
                 }
             }
@@ -126,23 +128,25 @@ namespace Игра
         }
 
         public static void Level_end(Model model, System.Windows.Forms.Timer timer1, System.Windows.Forms.Timer timer2, System.Windows.Forms.Timer timer3, System.Windows.Forms.Timer timer4, Label label1, Label label2, Label label3, Button button1, Button button2, Button button3,
-            RichTextBox richTextBox, int n_1, int n_2, int n_3)
+            RichTextBox richTextBox, int n_1, int n_2, int n_3, string Image, string Image_block, bool Image_Enabled)
         {
-            timer1.Stop();
-            timer2.Stop();
-            timer3.Stop();
-            timer4.Stop();
             if (model.number_clicks[n_1] == model.number_random_clicks[model.level - 1, 0] && model.number_clicks[n_2] == model.number_random_clicks[model.level - 1, 1] && model.number_clicks[n_3] == model.number_random_clicks[model.level - 1, 2] && model.sec > 0)
             {
+                timer1.Stop();
+                timer2.Stop();
+                timer3.Stop();
+                timer4.Stop();
                 DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.", "Институт пройден!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 if (dialog == DialogResult.OK)
                 {
+                    Image = Image_block;
+                    Image_Enabled = false;
                     model.number_clicks[n_1] = model.number_clicks[n_2] = model.number_clicks[n_3] = 0;
                     model.sec = 0;
                     model.level = 1;
                     label1.Text = label2.Text = label3.Text = $"";
                     richTextBox.Text = "Институт пройден !!!";
-                    button1.Visible = button1.Visible = button1.Visible = false;
+                    button1.Visible = button2.Visible = button3.Visible = false;
                 }
             }
             else if (model.sec == 0)
