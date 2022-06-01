@@ -63,9 +63,7 @@ namespace Игра
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
                 panel2.Visible = true;
-            }
         }
 
         private void Play_Click(object sender, EventArgs e)
@@ -76,13 +74,6 @@ namespace Игра
             Close();
         }
 
-        private void Map_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Map map = new Map();
-            map.ShowDialog();
-            Close();
-        }
         public void global_FormClosed()
         {
             Application.Exit();

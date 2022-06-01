@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.Exit = new System.Windows.Forms.Button();
-            this.Map = new System.Windows.Forms.Button();
             this.Play = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -105,7 +104,6 @@
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.pictureBox17);
             this.panel2.Controls.Add(this.Exit);
-            this.panel2.Controls.Add(this.Map);
             this.panel2.Controls.Add(this.Play);
             this.panel2.Controls.Add(this.pictureBox16);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -136,24 +134,11 @@
             this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // Map
-            // 
-            this.Map.BackColor = System.Drawing.Color.Yellow;
-            this.Map.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold);
-            this.Map.Location = new System.Drawing.Point(560, 303);
-            this.Map.Margin = new System.Windows.Forms.Padding(4);
-            this.Map.Name = "Map";
-            this.Map.Size = new System.Drawing.Size(370, 90);
-            this.Map.TabIndex = 32;
-            this.Map.Text = "КАРТА";
-            this.Map.UseVisualStyleBackColor = false;
-            this.Map.Click += new System.EventHandler(this.Map_Click);
-            // 
             // Play
             // 
             this.Play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(185)))), ((int)(((byte)(26)))));
             this.Play.Font = new System.Drawing.Font("Perpetua Titling MT", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Play.Location = new System.Drawing.Point(560, 205);
+            this.Play.Location = new System.Drawing.Point(560, 291);
             this.Play.Margin = new System.Windows.Forms.Padding(4);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(370, 90);
@@ -414,7 +399,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Button Exit;
-        private System.Windows.Forms.Button Map;
         private System.Windows.Forms.Button Play;
         private System.Windows.Forms.PictureBox pictureBox17;
     }

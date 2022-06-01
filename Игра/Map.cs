@@ -19,8 +19,11 @@ namespace Игра
             InitializeComponent();
             Music.pl2.Play();
             this.Load += new EventHandler(Form1_Load);
-            
+            label1.Text = Statistics.number_clicks.ToString();
+            pictureBox3.Image = Image.FromFile(Button_image_map.Image_IMiKN);
+            pictureBox3.Enabled = Button_image_map.Image_IMiKN_Enabled;
         }
+
         void Form1_Load(object sender, EventArgs e)
         {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
@@ -72,7 +75,7 @@ namespace Игра
             }
 
         }
-
+        
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Hide();
