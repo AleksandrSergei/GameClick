@@ -37,11 +37,4 @@ namespace Игра
             button3.Image = Image.FromFile($"фотки\\кнопка {model.path_names[n_3]}.png");
         }
     }
-
-    public static class Button_image_map
-    {
-        public static string Image_IMiKN = $"фотки\\иконка ИМиКН.png";
-        public static string Image_IMiKN_block = $"фотки\\иконка ИМиКН_block.png";
-        public static bool Image_IMiKN_Enabled = true;
-    }
 }
