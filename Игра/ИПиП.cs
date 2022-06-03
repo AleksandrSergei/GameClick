@@ -29,7 +29,7 @@ namespace Игра
                                              { 10, 1, 7 },
                                              { 11, 0, 3 },
                                              { 10, 1, 3 } },
-                time_sec = new int[] { 10, 20, 30, 50, 90 },
+                time_sec = new int[] { 20, 30, 40, 50, 90 },
                 number_random_clicks = new int[5, 3]
             };
 
