@@ -13,9 +13,6 @@ namespace Игра
 {
     public partial class Заставка : Form
     {
-        public Timer t = new Timer();
-        
-
         public Заставка()
         {
             InitializeComponent();
@@ -31,27 +28,8 @@ namespace Игра
 
         private void Заставка_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Start();
-                //t.Interval = 400;
-                //t.Tick += new EventHandler(t_Tick);
-                //t.Start();
-        }
-
-        //void t_Tick(object sender, EventArgs e)
-        //{
-        //    label1.Visible = !label1.Visible;
-        //}
-
-        private void Заставка_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Hide();
-                Menu f1 = new Menu();
-                f1.ShowDialog();
-                Close();
-            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -71,21 +49,6 @@ namespace Игра
             pictureBox15.Visible = false;
             pictureBox14.Visible = true;
             label1.Visible = true;
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
