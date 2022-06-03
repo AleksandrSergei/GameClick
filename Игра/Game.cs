@@ -12,8 +12,6 @@ namespace Игра
 {
     public partial class Game : Form
     {
-        public Timer t = new Timer();
-
         public Game()
         {
             InitializeComponent();
@@ -27,8 +25,6 @@ namespace Игра
             pictureBox14.Visible = false;
             panel2.Visible = false;
         }
-
-        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -49,14 +45,9 @@ namespace Игра
             label1.Visible = true;
         }
 
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Game_Load(object sender, EventArgs e)
         {
-            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Start();
         }
 
@@ -74,10 +65,8 @@ namespace Игра
             Close();
         }
 
-        public void global_FormClosed()
-        {
-            Application.Exit();
-        }
+        public void global_FormClosed() => Application.Exit();
+
 
         private void Exit_Click(object sender, EventArgs e)
         {
