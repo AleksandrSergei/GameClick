@@ -31,9 +31,9 @@ namespace Игра
         {
             InitializeComponent();
 
-            button1.Visible = true;
-            button2.Visible = true;
-            button3.Visible = true;
+            button1_InBio.Visible = true;
+            button2_InBio.Visible = true;
+            button3_InBio.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -242,7 +242,7 @@ namespace Игра
                 label3.Text = $"Кол-во листов: {sheet}";
             }
 
-            timer1.Start();
+            timer_number_seconds.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -263,7 +263,7 @@ namespace Игра
             {
                 if ((book == 20 && plant == 20 && pencil == 40) && (s > 0 || h > 0 || m > 0))
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
                                                       "Уровень пройден",
                                                       MessageBoxButtons.OK,
@@ -278,14 +278,14 @@ namespace Игра
                         label2.Text = $"Кол-во растений: {plant}";
                         label3.Text = $"Кол-во мозгов: {brain}";
                         richTextBox1.Text = "Сдать лабораторную работу по биоинженерии:\n60 микроскопов\n50 растений\n40 мозгов\nУ вас есть 40 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка микроскоп.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка растение.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
+                        button1_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка микроскоп.png");
+                        button2_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка растение.png");
+                        button3_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка мозг.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: книг {book}, растений {plant}, карандашей {pencil}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
@@ -306,7 +306,7 @@ namespace Игра
             {
                 if ((microscope == 60 && plant == 50 && brain == 40) && (s > 0 || h > 0 || m > 0))
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
                                                       "Уровень пройден",
                                                       MessageBoxButtons.OK,
@@ -321,14 +321,14 @@ namespace Игра
                         label2.Text = $"Кол-во фруктов: {fruits}";
                         label3.Text = $"Кол-во газировок: {soda}";
                         richTextBox1.Text = "Время покушать, столовая:\n90 завтраков\n60 фруктов\n30 газировок\nУ вас есть 1 минута!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка завтрак.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка фрукты.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка газировка.png");
+                        button1_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка завтрак.png");
+                        button2_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка фрукты.png");
+                        button3_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка газировка.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: микроскопов {microscope}, растений {plant}, мозгов {brain}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
@@ -349,7 +349,7 @@ namespace Игра
             {
                 if ((breakfast == 90 && fruits == 60 && soda == 30) && (s > 0 || h > 0 || m > 0))
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
                                                       "Уровень пройден",
                                                       MessageBoxButtons.OK,
@@ -364,14 +364,14 @@ namespace Игра
                         label2.Text = $"Кол-во колб: {flack}";
                         label3.Text = $"Кол-во листов: {sheet}";
                         richTextBox1.Text = "Решить задачи по биотехнологиям:\n150 днк\n100 колб\n50 листов\nУ вас есть 1 минут 20 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка днк.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка колбы.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
+                        button1_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка днк.png");
+                        button2_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка колбы.png");
+                        button3_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: завтраков {breakfast}, фруктоа {fruits}, газировок {soda}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
@@ -392,7 +392,7 @@ namespace Игра
             {
                 if ((dnk == 150 && flack == 100 && sheet == 50) && (s > 0 || h > 0 || m > 0))
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
                                                       "Уровень пройден",
                                                       MessageBoxButtons.OK,
@@ -407,14 +407,14 @@ namespace Игра
                         label2.Text = $"Кол-во растенйи: {plant}";
                         label3.Text = $"Кол-во листов: {sheet}";
                         richTextBox1.Text = "Сдать реферат на тему 'Анатомия растений':\n120 микроскопов\n175 растений\n80 листов\nУ вас есть 1 минут 40 секунд!";
-                        button1.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка микроскоп.png");
-                        button2.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка растение.png");
-                        button3.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
+                        button1_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка микроскоп.png");
+                        button2_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка растение.png");
+                        button3_InBio.Image = Image.FromFile("C:\\Users\\Александр\\Desktop\\Игра\\Игра\\bin\\Debug\\фотки\\кнопка лист2.png");
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: днк {dnk}, колб {flack}, листов {sheet}.",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
@@ -435,7 +435,7 @@ namespace Игра
             {
                 if ((microscope == 120 && plant == 175 && sheet == 80) && (s > 0 || h > 0 || m > 0))
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Поздравляю! Вы справились.",
                                                       "Институт пройден!",
                                                       MessageBoxButtons.OK,
@@ -450,14 +450,14 @@ namespace Игра
                         label2.Text = $"";
                         label3.Text = $"";
                         richTextBox1.Text = "Институт пройден !!!";
-                        button1.Visible = false;
-                        button2.Visible = false;
-                        button3.Visible = false;
+                        button1_InBio.Visible = false;
+                        button2_InBio.Visible = false;
+                        button3_InBio.Visible = false;
                     }
                 }
                 else if (h == 0 && m == 0 && s == 0)
                 {
-                    timer1.Stop();
+                    timer_number_seconds.Stop();
                     DialogResult dialog = MessageBox.Show($"Ваш результат: Кол-во: микроскопов {microscope}, растений {plant}, листов {sheet}",
                                                       "Время вышло",
                                                       MessageBoxButtons.OK,
