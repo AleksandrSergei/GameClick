@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button1_IPiP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAB3CAYAAADIMoQHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAADR0RVh0Q29tbWVudAB4cjpkOkRBRV9nMFZ6cDA4Ojk2LGo6MjUxNzExNjkzMjcs
+        cgAAEnIBXmVb4wAAADR0RVh0Q29tbWVudAB4cjpkOkRBRV9nMFZ6cDA4Ojk2LGo6MjUxNzExNjkzMjcs
         dDoyMjA1MDIxMRge9xYAADXKSURBVHhe7X13fFXHne8VGJc4LnHK7tu8fN4nm03yNptNNuUltjEIVaoT
         Z5NsvE6yqY573BsuBBewAWMMCBUkIdRF78UF2xQbd1zAYIqNEaB6u666vu/7PefO5ejqXCFhwMLxH9/P
         nHtmzpw5851fm5l7jufsZV54nuw6gqccx5+ib1hPlNXCU7ifeB+e1W2Jy5UehmdRyD3/RODsZY08wKfo
@@ -355,10 +355,10 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_door_IPiP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATcAAAHnCAIAAABSfo1KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAUttJREFUeF7t3fd3HEe2J/j+q95OP0kkXHkHD5ISZUhJFI0cWy1PAgS9pyh6A5Ig
+        cgAAEnIBXmVb4wAAUttJREFUeF7t3fd3HEe2J/j+q95OP0kkXHkHD5ISZUhJFI0cWy1PAgS9pyh6A5Ig
         4SlKamnmvXaSumXpAMI7Oqm738zs7A/70+7MnLPv7c0M4Fbgm4nKqqxAoYC653wOT1TEjbiVhbjISjCB
         +tW//8d//L//83//8rd/PP75b+ThL/9I+/nfyGOxpDx6/A9XEMYgzBNMZxDGIIxBmCeYziCMQRiDME8w
         nUEYgzAGYeyB8vPf2aPHv5Cff/n7f/vv/+P/+Z9Unf/rV3//t3/09n2yo3VX45q1aaufZavEktK0aq0r
@@ -715,10 +715,10 @@
         RK5CYII=
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button3_IPiP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAB3CAYAAADIMoQHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAADV0RVh0Q29tbWVudAB4cjpkOkRBRV9nMFZ6cDA4OjEwOSxqOjI1MTcxNTg0NjM5
+        cgAAEnIBXmVb4wAAADV0RVh0Q29tbWVudAB4cjpkOkRBRV9nMFZ6cDA4OjEwOSxqOjI1MTcxNTg0NjM5
         LHQ6MjIwNTAyMTEzbG3/AABKZ0lEQVR4Xu19d3xVRfo+VlRUBKWTkN7uvbklnYSiWGgCogu7VgTpHQJp
         gPSaHkoICakEkhB6CxAghNBRVCxrWdva9ru6xbK7rvr8nnfOPclNvGCA4Or+9o/nM+ecOTNnZp5533nf
         mTnnNOtduQE9D29CVHUpIquKEXV4Y6PQ7cimenB2jzN0O1I/rbN7LgbHdJeT9krTCRzTdWc7dTvEa4Qc
@@ -1040,10 +1040,10 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button2_IPiP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAADV0RVh0Q29tbWVudAB4cjpkOkRBRV9nMFZ6cDA4OjEwMyxqOjI1MTcxMzgwMTIw
+        cgAAEnIBXmVb4wAAADV0RVh0Q29tbWVudAB4cjpkOkRBRV9nMFZ6cDA4OjEwMyxqOjI1MTcxMzgwMTIw
         LHQ6MjIwNTAyMTF7tZCTAABEvklEQVR4Xu19d3xVVdY2M/PO+87o6DgjICK9JJRAIAQCIb333gsloSnN
         MuMUHcfedWxYaBZEsTOg2EVROlLSe7n9ptJVUJ/vWfvcm9yEm1AMDvrNH89vn3t2PfvZa+219t7nnl61
         i/JRdP1slF03FxWL84k5Z4Sya/Md4DyNM5QzrWNeZ2m6gmO+8iXO0ziDYz6BszTOUL60Y95K/q5Yyn4i
@@ -2626,7 +2626,16 @@
         D6Cy2yM+drjgGRd1T/D2zc0xs6D+abEnyw6pv//Z
 </value>
   </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timer_number_seconds.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="timer_move_button1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>183, 18</value>
+  </metadata>
+  <metadata name="timer_move_button2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>349, 20</value>
+  </metadata>
+  <metadata name="timer_move_button3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>524, 20</value>
   </metadata>
 </root>
