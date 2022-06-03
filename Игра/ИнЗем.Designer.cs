@@ -31,234 +31,219 @@ namespace Игра
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ИнЗем));
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1_InZem = new System.Windows.Forms.Button();
+            this.pictureBox_door_InZem = new System.Windows.Forms.PictureBox();
+            this.label3_number_clicks_InZem = new System.Windows.Forms.Label();
+            this.label2_number_clicks_InZem = new System.Windows.Forms.Label();
+            this.name_institute_InZem = new System.Windows.Forms.Label();
+            this.button_start_InZem = new System.Windows.Forms.Button();
+            this.label_timer_InZem = new System.Windows.Forms.Label();
+            this.label_number_seconds_InZem = new System.Windows.Forms.Label();
+            this.richTextBox_InZem = new System.Windows.Forms.RichTextBox();
+            this.button3_InZem = new System.Windows.Forms.Button();
+            this.button2_InZem = new System.Windows.Forms.Button();
+            this.label1_number_clicks_InZem = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.timer_number_seconds = new System.Windows.Forms.Timer(this.components);
+            this.timer_move_button1 = new System.Windows.Forms.Timer(this.components);
+            this.timer_move_button2 = new System.Windows.Forms.Timer(this.components);
+            this.timer_move_button3 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_door_InZem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // button1_InZem
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(68, 428);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(174, 160);
-            this.button1.TabIndex = 99;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1_InZem.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button1_InZem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1_InZem.ForeColor = System.Drawing.Color.Transparent;
+            this.button1_InZem.Image = ((System.Drawing.Image)(resources.GetObject("button1_InZem.Image")));
+            this.button1_InZem.Location = new System.Drawing.Point(51, 348);
+            this.button1_InZem.Margin = new System.Windows.Forms.Padding(0);
+            this.button1_InZem.Name = "button1_InZem";
+            this.button1_InZem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1_InZem.Size = new System.Drawing.Size(130, 130);
+            this.button1_InZem.TabIndex = 99;
+            this.button1_InZem.UseVisualStyleBackColor = false;
+            this.button1_InZem.Click += new System.EventHandler(this.Button1_InZem_Click);
             // 
-            // pictureBox2
+            // pictureBox_door_InZem
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1400, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(71, 91);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 98;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox_door_InZem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_door_InZem.Image")));
+            this.pictureBox_door_InZem.Location = new System.Drawing.Point(1050, 7);
+            this.pictureBox_door_InZem.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox_door_InZem.Name = "pictureBox_door_InZem";
+            this.pictureBox_door_InZem.Size = new System.Drawing.Size(53, 74);
+            this.pictureBox_door_InZem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_door_InZem.TabIndex = 98;
+            this.pictureBox_door_InZem.TabStop = false;
+            this.pictureBox_door_InZem.Click += new System.EventHandler(this.PictureBox_door_InZem_Click);
             // 
-            // label3
+            // label3_number_clicks_InZem
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(891, 192);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 26);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "Кол-во компасов:";
+            this.label3_number_clicks_InZem.AutoSize = true;
+            this.label3_number_clicks_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.label3_number_clicks_InZem.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3_number_clicks_InZem.Location = new System.Drawing.Point(668, 156);
+            this.label3_number_clicks_InZem.Name = "label3_number_clicks_InZem";
+            this.label3_number_clicks_InZem.Size = new System.Drawing.Size(30, 21);
+            this.label3_number_clicks_InZem.TabIndex = 90;
+            this.label3_number_clicks_InZem.Text = "    ";
             // 
-            // label2
+            // label2_number_clicks_InZem
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(891, 149);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 26);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "Кол-во книг:";
+            this.label2_number_clicks_InZem.AutoSize = true;
+            this.label2_number_clicks_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.label2_number_clicks_InZem.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2_number_clicks_InZem.Location = new System.Drawing.Point(668, 121);
+            this.label2_number_clicks_InZem.Name = "label2_number_clicks_InZem";
+            this.label2_number_clicks_InZem.Size = new System.Drawing.Size(30, 21);
+            this.label2_number_clicks_InZem.TabIndex = 87;
+            this.label2_number_clicks_InZem.Text = "    ";
             // 
-            // label8
+            // name_institute_InZem
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label8.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(623, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(273, 33);
-            this.label8.TabIndex = 97;
-            this.label8.Text = "Институт наук о Земле";
+            this.name_institute_InZem.AutoSize = true;
+            this.name_institute_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.name_institute_InZem.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_institute_InZem.Location = new System.Drawing.Point(467, 44);
+            this.name_institute_InZem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name_institute_InZem.Name = "name_institute_InZem";
+            this.name_institute_InZem.Size = new System.Drawing.Size(216, 26);
+            this.name_institute_InZem.TabIndex = 97;
+            this.name_institute_InZem.Text = "Институт наук о Земле";
             // 
-            // button4
+            // button_start_InZem
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button4.Font = new System.Drawing.Font("Perpetua Titling MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(167, 235);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 38);
-            this.button4.TabIndex = 96;
-            this.button4.Text = "Начать";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_start_InZem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button_start_InZem.Font = new System.Drawing.Font("Perpetua Titling MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_start_InZem.Location = new System.Drawing.Point(125, 191);
+            this.button_start_InZem.Name = "button_start_InZem";
+            this.button_start_InZem.Size = new System.Drawing.Size(82, 31);
+            this.button_start_InZem.TabIndex = 96;
+            this.button_start_InZem.Text = "Начать";
+            this.button_start_InZem.UseVisualStyleBackColor = false;
+            this.button_start_InZem.Click += new System.EventHandler(this.Button_start_InZem_Click);
             // 
-            // label7
+            // label_timer_InZem
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label7.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 27);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 29);
-            this.label7.TabIndex = 95;
-            this.label7.Text = "ТАЙМЕР";
+            this.label_timer_InZem.AutoSize = true;
+            this.label_timer_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            this.label_timer_InZem.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_timer_InZem.Location = new System.Drawing.Point(56, 22);
+            this.label_timer_InZem.Name = "label_timer_InZem";
+            this.label_timer_InZem.Size = new System.Drawing.Size(86, 23);
+            this.label_timer_InZem.TabIndex = 95;
+            this.label_timer_InZem.Text = "ТАЙМЕР";
             // 
-            // label6
+            // label_number_seconds_InZem
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label6.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
-            this.label6.Location = new System.Drawing.Point(110, 239);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 28);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "0";
+            this.label_number_seconds_InZem.AutoSize = true;
+            this.label_number_seconds_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            this.label_number_seconds_InZem.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
+            this.label_number_seconds_InZem.Location = new System.Drawing.Point(82, 194);
+            this.label_number_seconds_InZem.Name = "label_number_seconds_InZem";
+            this.label_number_seconds_InZem.Size = new System.Drawing.Size(23, 22);
+            this.label_number_seconds_InZem.TabIndex = 94;
+            this.label_number_seconds_InZem.Text = "0";
             // 
-            // label5
+            // richTextBox_InZem
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
-            this.label5.Location = new System.Drawing.Point(74, 239);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 28);
-            this.label5.TabIndex = 93;
-            this.label5.Text = "0";
+            this.richTextBox_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.richTextBox_InZem.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_InZem.Location = new System.Drawing.Point(242, 83);
+            this.richTextBox_InZem.Margin = new System.Windows.Forms.Padding(0);
+            this.richTextBox_InZem.Name = "richTextBox_InZem";
+            this.richTextBox_InZem.Size = new System.Drawing.Size(425, 160);
+            this.richTextBox_InZem.TabIndex = 91;
+            this.richTextBox_InZem.Text = "";
             // 
-            // label4
+            // button3_InZem
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 239);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 28);
-            this.label4.TabIndex = 92;
-            this.label4.Text = "0";
+            this.button3_InZem.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button3_InZem.Image = ((System.Drawing.Image)(resources.GetObject("button3_InZem.Image")));
+            this.button3_InZem.Location = new System.Drawing.Point(947, 243);
+            this.button3_InZem.Name = "button3_InZem";
+            this.button3_InZem.Size = new System.Drawing.Size(130, 130);
+            this.button3_InZem.TabIndex = 89;
+            this.button3_InZem.UseVisualStyleBackColor = false;
+            this.button3_InZem.Click += new System.EventHandler(this.Button3_InZem_Click);
             // 
-            // richTextBox1
+            // button2_InZem
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(322, 102);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(565, 196);
-            this.richTextBox1.TabIndex = 91;
-            this.richTextBox1.Text = "Прийти на лекция по географии и записать материал:\n60 карт\n30 книг\n30 компасов\nУ " +
-    "вас есть 40 секунд!";
+            this.button2_InZem.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button2_InZem.Image = ((System.Drawing.Image)(resources.GetObject("button2_InZem.Image")));
+            this.button2_InZem.Location = new System.Drawing.Point(542, 362);
+            this.button2_InZem.Margin = new System.Windows.Forms.Padding(2);
+            this.button2_InZem.Name = "button2_InZem";
+            this.button2_InZem.Size = new System.Drawing.Size(130, 130);
+            this.button2_InZem.TabIndex = 88;
+            this.button2_InZem.UseVisualStyleBackColor = false;
+            this.button2_InZem.Click += new System.EventHandler(this.Button2_InZem_Click);
             // 
-            // button3
+            // label1_number_clicks_InZem
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1263, 299);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 160);
-            this.button3.TabIndex = 89;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(722, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 160);
-            this.button2.TabIndex = 88;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(891, 108);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 26);
-            this.label1.TabIndex = 86;
-            this.label1.Text = "Кол-во карт:";
+            this.label1_number_clicks_InZem.AutoSize = true;
+            this.label1_number_clicks_InZem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.label1_number_clicks_InZem.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_number_clicks_InZem.Location = new System.Drawing.Point(668, 88);
+            this.label1_number_clicks_InZem.Name = "label1_number_clicks_InZem";
+            this.label1_number_clicks_InZem.Size = new System.Drawing.Size(35, 21);
+            this.label1_number_clicks_InZem.TabIndex = 86;
+            this.label1_number_clicks_InZem.Text = "     ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1492, 758);
+            this.pictureBox1.Size = new System.Drawing.Size(1119, 616);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 85;
             this.pictureBox1.TabStop = false;
             // 
-            // timer1
+            // timer_number_seconds
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer_number_seconds.Interval = 1000;
+            this.timer_number_seconds.Tick += new System.EventHandler(this.Timer_number_seconds_Tick);
+            // 
+            // timer_move_button1
+            // 
+            this.timer_move_button1.Interval = 1;
+            this.timer_move_button1.Tick += new System.EventHandler(this.Timer_move_button1_Tick);
+            // 
+            // timer_move_button2
+            // 
+            this.timer_move_button2.Interval = 30;
+            this.timer_move_button2.Tick += new System.EventHandler(this.Timer_move_button2_Tick);
+            // 
+            // timer_move_button3
+            // 
+            this.timer_move_button3.Interval = 60;
+            this.timer_move_button3.Tick += new System.EventHandler(this.Timer_move_button3_Tick);
             // 
             // ИнЗем
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1112, 612);
+            this.Controls.Add(this.button1_InZem);
+            this.Controls.Add(this.button3_InZem);
+            this.Controls.Add(this.button2_InZem);
+            this.Controls.Add(this.pictureBox_door_InZem);
+            this.Controls.Add(this.label3_number_clicks_InZem);
+            this.Controls.Add(this.label2_number_clicks_InZem);
+            this.Controls.Add(this.name_institute_InZem);
+            this.Controls.Add(this.button_start_InZem);
+            this.Controls.Add(this.label_timer_InZem);
+            this.Controls.Add(this.label_number_seconds_InZem);
+            this.Controls.Add(this.richTextBox_InZem);
+            this.Controls.Add(this.label1_number_clicks_InZem);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ИнЗем";
             this.Text = "ИнЗем";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_door_InZem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,21 +252,22 @@ namespace Игра
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1_InZem;
+        private System.Windows.Forms.PictureBox pictureBox_door_InZem;
+        private System.Windows.Forms.Label label3_number_clicks_InZem;
+        private System.Windows.Forms.Label label2_number_clicks_InZem;
+        private System.Windows.Forms.Label name_institute_InZem;
+        private System.Windows.Forms.Button button_start_InZem;
+        private System.Windows.Forms.Label label_timer_InZem;
+        private System.Windows.Forms.Label label_number_seconds_InZem;
+        private System.Windows.Forms.RichTextBox richTextBox_InZem;
+        private System.Windows.Forms.Button button3_InZem;
+        private System.Windows.Forms.Button button2_InZem;
+        private System.Windows.Forms.Label label1_number_clicks_InZem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer_number_seconds;
+        private System.Windows.Forms.Timer timer_move_button1;
+        private System.Windows.Forms.Timer timer_move_button2;
+        private System.Windows.Forms.Timer timer_move_button3;
     }
 }
