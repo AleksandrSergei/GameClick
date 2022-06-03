@@ -30,234 +30,219 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ФЭИ));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label3_number_clicks_FEI = new System.Windows.Forms.Label();
+            this.label2_number_clicks_FEI = new System.Windows.Forms.Label();
+            this.name_institute_FEI = new System.Windows.Forms.Label();
+            this.button_start_FEI = new System.Windows.Forms.Button();
+            this.label_timer_FEI = new System.Windows.Forms.Label();
+            this.label_number_seconds_FEI = new System.Windows.Forms.Label();
+            this.richTextBox_FEI = new System.Windows.Forms.RichTextBox();
+            this.label1_number_clicks_FEI = new System.Windows.Forms.Label();
+            this.timer_number_seconds = new System.Windows.Forms.Timer(this.components);
+            this.button1_FEI = new System.Windows.Forms.Button();
+            this.pictureBox_door_FEI = new System.Windows.Forms.PictureBox();
+            this.button3_FEI = new System.Windows.Forms.Button();
+            this.button2_FEI = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.timer_move_button1 = new System.Windows.Forms.Timer(this.components);
+            this.timer_move_button2 = new System.Windows.Forms.Timer(this.components);
+            this.timer_move_button3 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_door_FEI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // label3_number_clicks_FEI
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(891, 192);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 26);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Кол-во мозгов:";
+            this.label3_number_clicks_FEI.AutoSize = true;
+            this.label3_number_clicks_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.label3_number_clicks_FEI.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3_number_clicks_FEI.Location = new System.Drawing.Point(650, 157);
+            this.label3_number_clicks_FEI.Name = "label3_number_clicks_FEI";
+            this.label3_number_clicks_FEI.Size = new System.Drawing.Size(50, 21);
+            this.label3_number_clicks_FEI.TabIndex = 45;
+            this.label3_number_clicks_FEI.Text = "        ";
             // 
-            // label2
+            // label2_number_clicks_FEI
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(891, 149);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 26);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Кол-во книг:";
+            this.label2_number_clicks_FEI.AutoSize = true;
+            this.label2_number_clicks_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.label2_number_clicks_FEI.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2_number_clicks_FEI.Location = new System.Drawing.Point(650, 121);
+            this.label2_number_clicks_FEI.Name = "label2_number_clicks_FEI";
+            this.label2_number_clicks_FEI.Size = new System.Drawing.Size(45, 21);
+            this.label2_number_clicks_FEI.TabIndex = 42;
+            this.label2_number_clicks_FEI.Text = "       ";
             // 
-            // label8
+            // name_institute_FEI
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label8.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(564, 58);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(399, 33);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Финансово-экономический институт";
+            this.name_institute_FEI.AutoSize = true;
+            this.name_institute_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.name_institute_FEI.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_institute_FEI.Location = new System.Drawing.Point(423, 47);
+            this.name_institute_FEI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name_institute_FEI.Name = "name_institute_FEI";
+            this.name_institute_FEI.Size = new System.Drawing.Size(312, 26);
+            this.name_institute_FEI.TabIndex = 52;
+            this.name_institute_FEI.Text = "Финансово-экономический институт";
             // 
-            // button4
+            // button_start_FEI
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button4.Font = new System.Drawing.Font("Perpetua Titling MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(167, 235);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 38);
-            this.button4.TabIndex = 51;
-            this.button4.Text = "Начать";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_start_FEI.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button_start_FEI.Font = new System.Drawing.Font("Perpetua Titling MT", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_start_FEI.Location = new System.Drawing.Point(125, 191);
+            this.button_start_FEI.Name = "button_start_FEI";
+            this.button_start_FEI.Size = new System.Drawing.Size(82, 31);
+            this.button_start_FEI.TabIndex = 51;
+            this.button_start_FEI.Text = "Начать";
+            this.button_start_FEI.UseVisualStyleBackColor = false;
+            this.button_start_FEI.Click += new System.EventHandler(this.Button_start_FEI_Click);
             // 
-            // label7
+            // label_timer_FEI
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label7.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 27);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 29);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "ТАЙМЕР";
+            this.label_timer_FEI.AutoSize = true;
+            this.label_timer_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            this.label_timer_FEI.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_timer_FEI.Location = new System.Drawing.Point(56, 22);
+            this.label_timer_FEI.Name = "label_timer_FEI";
+            this.label_timer_FEI.Size = new System.Drawing.Size(86, 23);
+            this.label_timer_FEI.TabIndex = 50;
+            this.label_timer_FEI.Text = "ТАЙМЕР";
             // 
-            // label6
+            // label_number_seconds_FEI
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label6.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
-            this.label6.Location = new System.Drawing.Point(110, 239);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 28);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "0";
+            this.label_number_seconds_FEI.AutoSize = true;
+            this.label_number_seconds_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
+            this.label_number_seconds_FEI.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
+            this.label_number_seconds_FEI.Location = new System.Drawing.Point(82, 194);
+            this.label_number_seconds_FEI.Name = "label_number_seconds_FEI";
+            this.label_number_seconds_FEI.Size = new System.Drawing.Size(23, 22);
+            this.label_number_seconds_FEI.TabIndex = 49;
+            this.label_number_seconds_FEI.Text = "0";
             // 
-            // label5
+            // richTextBox_FEI
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F);
-            this.label5.Location = new System.Drawing.Point(74, 239);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 28);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "0";
+            this.richTextBox_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.richTextBox_FEI.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox_FEI.Location = new System.Drawing.Point(242, 83);
+            this.richTextBox_FEI.Margin = new System.Windows.Forms.Padding(0);
+            this.richTextBox_FEI.Name = "richTextBox_FEI";
+            this.richTextBox_FEI.Size = new System.Drawing.Size(405, 160);
+            this.richTextBox_FEI.TabIndex = 46;
+            this.richTextBox_FEI.Text = "";
             // 
-            // label4
+            // label1_number_clicks_FEI
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
-            this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 239);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 28);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "0";
+            this.label1_number_clicks_FEI.AutoSize = true;
+            this.label1_number_clicks_FEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
+            this.label1_number_clicks_FEI.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1_number_clicks_FEI.Location = new System.Drawing.Point(650, 88);
+            this.label1_number_clicks_FEI.Name = "label1_number_clicks_FEI";
+            this.label1_number_clicks_FEI.Size = new System.Drawing.Size(50, 21);
+            this.label1_number_clicks_FEI.TabIndex = 41;
+            this.label1_number_clicks_FEI.Text = "        ";
             // 
-            // richTextBox1
+            // timer_number_seconds
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe Print", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(322, 102);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(565, 196);
-            this.richTextBox1.TabIndex = 46;
-            this.richTextBox1.Text = "Тебе нужно сдать презентацию по Социологии:\n100 человек\n70 книг\n80 мозгов\nУ вас е" +
-    "сть 50 секунд!";
+            this.timer_number_seconds.Interval = 1000;
+            this.timer_number_seconds.Tick += new System.EventHandler(this.Timer_number_seconds_Tick);
             // 
-            // label1
+            // button1_FEI
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(147)))), ((int)(((byte)(113)))));
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(891, 108);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 26);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Кол-во человек:";
+            this.button1_FEI.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button1_FEI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1_FEI.ForeColor = System.Drawing.Color.Transparent;
+            this.button1_FEI.Image = ((System.Drawing.Image)(resources.GetObject("button1_FEI.Image")));
+            this.button1_FEI.Location = new System.Drawing.Point(51, 348);
+            this.button1_FEI.Margin = new System.Windows.Forms.Padding(0);
+            this.button1_FEI.Name = "button1_FEI";
+            this.button1_FEI.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1_FEI.Size = new System.Drawing.Size(130, 130);
+            this.button1_FEI.TabIndex = 54;
+            this.button1_FEI.UseVisualStyleBackColor = false;
+            this.button1_FEI.Click += new System.EventHandler(this.Button1_FEI_Click);
             // 
-            // timer1
+            // pictureBox_door_FEI
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.pictureBox_door_FEI.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_door_FEI.Image")));
+            this.pictureBox_door_FEI.Location = new System.Drawing.Point(1050, 7);
+            this.pictureBox_door_FEI.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox_door_FEI.Name = "pictureBox_door_FEI";
+            this.pictureBox_door_FEI.Size = new System.Drawing.Size(53, 74);
+            this.pictureBox_door_FEI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_door_FEI.TabIndex = 53;
+            this.pictureBox_door_FEI.TabStop = false;
+            this.pictureBox_door_FEI.Click += new System.EventHandler(this.PictureBox_door_FEI_Click);
             // 
-            // button1
+            // button3_FEI
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(68, 428);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(174, 160);
-            this.button1.TabIndex = 54;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3_FEI.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button3_FEI.Image = ((System.Drawing.Image)(resources.GetObject("button3_FEI.Image")));
+            this.button3_FEI.Location = new System.Drawing.Point(947, 243);
+            this.button3_FEI.Name = "button3_FEI";
+            this.button3_FEI.Size = new System.Drawing.Size(130, 130);
+            this.button3_FEI.TabIndex = 44;
+            this.button3_FEI.UseVisualStyleBackColor = false;
+            this.button3_FEI.Click += new System.EventHandler(this.Button3_FEI_Click);
             // 
-            // pictureBox2
+            // button2_FEI
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1400, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(71, 91);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1263, 299);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 160);
-            this.button3.TabIndex = 44;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(722, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 160);
-            this.button2.TabIndex = 43;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2_FEI.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button2_FEI.Image = ((System.Drawing.Image)(resources.GetObject("button2_FEI.Image")));
+            this.button2_FEI.Location = new System.Drawing.Point(542, 362);
+            this.button2_FEI.Margin = new System.Windows.Forms.Padding(2);
+            this.button2_FEI.Name = "button2_FEI";
+            this.button2_FEI.Size = new System.Drawing.Size(130, 130);
+            this.button2_FEI.TabIndex = 43;
+            this.button2_FEI.UseVisualStyleBackColor = false;
+            this.button2_FEI.Click += new System.EventHandler(this.Button2_FEI_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1492, 758);
+            this.pictureBox1.Size = new System.Drawing.Size(1119, 616);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
+            // timer_move_button1
+            // 
+            this.timer_move_button1.Interval = 1;
+            this.timer_move_button1.Tick += new System.EventHandler(this.Timer_move_button1_Tick);
+            // 
+            // timer_move_button2
+            // 
+            this.timer_move_button2.Interval = 30;
+            this.timer_move_button2.Tick += new System.EventHandler(this.Timer_move_button2_Tick);
+            // 
+            // timer_move_button3
+            // 
+            this.timer_move_button3.Interval = 60;
+            this.timer_move_button3.Tick += new System.EventHandler(this.Timer_move_button3_Tick);
+            // 
             // ФЭИ
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1112, 612);
+            this.Controls.Add(this.button3_FEI);
+            this.Controls.Add(this.button1_FEI);
+            this.Controls.Add(this.button2_FEI);
+            this.Controls.Add(this.pictureBox_door_FEI);
+            this.Controls.Add(this.label3_number_clicks_FEI);
+            this.Controls.Add(this.label2_number_clicks_FEI);
+            this.Controls.Add(this.name_institute_FEI);
+            this.Controls.Add(this.button_start_FEI);
+            this.Controls.Add(this.label_timer_FEI);
+            this.Controls.Add(this.label_number_seconds_FEI);
+            this.Controls.Add(this.richTextBox_FEI);
+            this.Controls.Add(this.label1_number_clicks_FEI);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ФЭИ";
             this.Text = "ФЭИ";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_door_FEI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,21 +251,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1_FEI;
+        private System.Windows.Forms.PictureBox pictureBox_door_FEI;
+        private System.Windows.Forms.Label label3_number_clicks_FEI;
+        private System.Windows.Forms.Label label2_number_clicks_FEI;
+        private System.Windows.Forms.Label name_institute_FEI;
+        private System.Windows.Forms.Button button_start_FEI;
+        private System.Windows.Forms.Label label_timer_FEI;
+        private System.Windows.Forms.Label label_number_seconds_FEI;
+        private System.Windows.Forms.RichTextBox richTextBox_FEI;
+        private System.Windows.Forms.Button button3_FEI;
+        private System.Windows.Forms.Button button2_FEI;
+        private System.Windows.Forms.Label label1_number_clicks_FEI;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer_number_seconds;
+        private System.Windows.Forms.Timer timer_move_button1;
+        private System.Windows.Forms.Timer timer_move_button2;
+        private System.Windows.Forms.Timer timer_move_button3;
     }
 }
