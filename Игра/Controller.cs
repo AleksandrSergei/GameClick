@@ -66,8 +66,8 @@ namespace Игра
                     x = y;
                     do
                     {
-                        model.number_random_clicks[i, j] += y % 10 * (i + 1);
-                        max -= y % 10 * (i + 1);
+                        model.number_random_clicks[i, j] += y % 10 * model.complexity*(i+1);
+                        max -= y % 10 * model.complexity * (i + 1);
                         y /= 10;
                     }
                     while (max > 0 && y != 0);
