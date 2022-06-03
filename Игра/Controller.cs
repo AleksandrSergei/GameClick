@@ -141,9 +141,37 @@ namespace Игра
                 {
                     switch (model.number_institute)
                     {
+                        case 1:
+                            Button_image_map.Image_IGiP = Button_image_map.Image_IGiP.Substring(0, Button_image_map.Image_IGiP.Length - 4) + "_block.png";
+                            Button_image_map.Image_IGiP_Enabled = false;
+                            break;
                         case 2:
                             Button_image_map.Image_IMiKN = Button_image_map.Image_IMiKN.Substring(0, Button_image_map.Image_IMiKN.Length - 4) + "_block.png"; 
                             Button_image_map.Image_IMiKN_Enabled = false;
+                            break;
+                        case 3:
+                            Button_image_map.Image_InBio = Button_image_map.Image_InBio.Substring(0, Button_image_map.Image_InBio.Length - 4) + "_block.png";
+                            Button_image_map.Image_InBio_Enabled = false;
+                            break;
+                        case 4:
+                            Button_image_map.Image_InZem = Button_image_map.Image_InZem.Substring(0, Button_image_map.Image_InZem.Length - 4) + "_block.png";
+                            Button_image_map.Image_InZem_Enabled = false;
+                            break;
+                        case 5:
+                            Button_image_map.Image_IPiP = Button_image_map.Image_IPiP.Substring(0, Button_image_map.Image_IPiP.Length - 4) + "_block.png";
+                            Button_image_map.Image_IPiP_Enabled = false;
+                            break;
+                        case 6:
+                            Button_image_map.Image_IFK = Button_image_map.Image_IFK.Substring(0, Button_image_map.Image_IFK.Length - 4) + "_block.png";
+                            Button_image_map.Image_IFK_Enabled = false;
+                            break;
+                        case 7:
+                            Button_image_map.Image_FizTech = Button_image_map.Image_FizTech.Substring(0, Button_image_map.Image_FizTech.Length - 4) + "_block.png";
+                            Button_image_map.Image_FizTech_Enabled = false;
+                            break;
+                        case 8:
+                            Button_image_map.Image_FEI = Button_image_map.Image_FEI.Substring(0, Button_image_map.Image_FEI.Length - 4) + "_block.png";
+                            Button_image_map.Image_FEI_Enabled = false;
                             break;
                     }
 
