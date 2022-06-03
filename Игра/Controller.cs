@@ -142,7 +142,7 @@ namespace Игра
                     switch (model.number_institute)
                     {
                         case 2:
-                            Button_image_map.Image_IMiKN = Button_image_map.Image_IMiKN_block;
+                            Button_image_map.Image_IMiKN = Button_image_map.Image_IMiKN.Substring(0, Button_image_map.Image_IMiKN.Length - 4) + "_block.png"; 
                             Button_image_map.Image_IMiKN_Enabled = false;
                             break;
                     }
