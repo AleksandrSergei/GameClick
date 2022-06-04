@@ -36,27 +36,27 @@ namespace Игра
     public static class Button_image_map
     {
         public static string Image_IMiKN = $"фотки\\иконка ИМиКН.png";
-        public static bool Image_IMiKN_Enabled = true;
+        public static bool Image_IMiKN_Enabled = false;
 
         public static string Image_IGiP = $"фотки\\иконка ИГиП.png";
         public static bool Image_IGiP_Enabled = true;
 
         public static string Image_InBio = $"фотки\\иконка ИнБио.png";
-        public static bool Image_InBio_Enabled = true;
+        public static bool Image_InBio_Enabled = false;
 
         public static string Image_InZem = $"фотки\\иконка ИнЗем.png";
-        public static bool Image_InZem_Enabled = true;
+        public static bool Image_InZem_Enabled = false;
 
         public static string Image_IPiP = $"фотки\\иконка ИПиП.png";
-        public static bool Image_IPiP_Enabled = true;
+        public static bool Image_IPiP_Enabled = false;
 
         public static string Image_IFK = $"фотки\\иконка ИФК.png";
-        public static bool Image_IFK_Enabled = true;
+        public static bool Image_IFK_Enabled = false;
 
         public static string Image_FizTech = $"фотки\\иконка ФизТех.png";
-        public static bool Image_FizTech_Enabled = true;
+        public static bool Image_FizTech_Enabled = false;
 
         public static string Image_FEI = $"фотки\\иконка ФЭИ.png";
-        public static bool Image_FEI_Enabled = true;
+        public static bool Image_FEI_Enabled = false;
     }
 }

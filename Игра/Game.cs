@@ -15,35 +15,11 @@ namespace Игра
         public Game()
         {
             InitializeComponent();
-            label1.Visible = false;
-            pictureBox7.Visible = false;
-            pictureBox8.Visible = false;
-            pictureBox9.Visible = false;
-            pictureBox10.Visible = false;
-            pictureBox11.Visible = false;
-            pictureBox12.Visible = false;
-            pictureBox14.Visible = false;
-            panel2.Visible = false;
+            View.InitializeGame(label1, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox14, panel2);
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            pictureBox1.Visible = false;
-            pictureBox7.Visible = true;
-            pictureBox2.Visible = false;
-            pictureBox8.Visible = true;
-            pictureBox3.Visible = false;
-            pictureBox9.Visible = true;
-            pictureBox4.Visible = false;
-            pictureBox10.Visible = true;
-            pictureBox5.Visible = false;
-            pictureBox11.Visible = true;
-            pictureBox6.Visible = false;
-            pictureBox12.Visible = true;
-            pictureBox15.Visible = false;
-            pictureBox14.Visible = true;
-            label1.Visible = true;
-        }
+        private void timer1_Tick(object sender, EventArgs e) => View.TimerGame(pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, 
+            pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox14, pictureBox15, label1);
 
         private void Game_Load(object sender, EventArgs e)
         {
@@ -51,11 +27,7 @@ namespace Игра
             timer1.Start();
         }
 
-        private void Game_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                panel2.Visible = true;
-        }
+        private void Game_KeyDown(object sender, KeyEventArgs e) => panel2.Visible = e.KeyCode == Keys.Enter;
 
         private void Play_Click(object sender, EventArgs e)
         {
